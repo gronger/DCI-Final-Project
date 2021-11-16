@@ -1,0 +1,12 @@
+.login{
+    width:30%;
+    height: 40%;
+    background-color: rgba(199, 196, 172, 0.562);
+    text-align: center;
+    margin: 10% auto;
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 20px;
+    
+}

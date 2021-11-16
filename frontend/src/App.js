@@ -1,15 +1,15 @@
-
+import React from 'react';
+import Login from './Login.jsx';
+import './App.css'
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <p>
-          konnichiwa welc0me 2 our app lolz 
-        </p>
-      </header>
+      <Login />
     </div>
   );
 }
+
 
 export default App;
