@@ -16,6 +16,7 @@ export default function Login() {
     }
 
     function loginHandler(e) {
+        
         e.preventDefault();
         let data = localStorage.getItem("info");
         console.log(JSON.parse(data));
