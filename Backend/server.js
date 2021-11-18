@@ -29,12 +29,6 @@ app.post('/main', (req, res) => {
 })
 
 
-app.post('/messages', (req, res) => {
-    if (req.body) {
-        return res.status(200).json(req.body)
-    }
-    res.json({message: "something went wrong :l"})
-})
 
 
 
