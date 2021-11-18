@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Login from './Login.jsx';
 
 export default function Main() {
 
