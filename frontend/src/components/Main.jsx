@@ -7,7 +7,7 @@ export default function Main() {
 
 return (
     <div className="main">
-<h1>Welcome to NameOfApp</h1>
+        <h1>Welcome to NameOfApp</h1>
     </div>
 
 )
