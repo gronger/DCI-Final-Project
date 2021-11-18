@@ -24,7 +24,7 @@ function App() {
         <Register />
         </Route>
 
-        <Route path="/Main.jsx">
+        <Route path="/main">
         <Main />
         </Route>
 
