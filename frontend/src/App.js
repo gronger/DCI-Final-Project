@@ -6,28 +6,24 @@ import {
   Switch,
   Route,
   Link
-} from 'react-router-dom';
+} from "react-router-dom";
 import Register from './components/Register.jsx';
-import Navbar from './components/Navbar.js';
-import Main from './components/Main.jsx';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './components/Navbar.js'
+import "bootstrap/dist/css/bootstrap.min.css" 
+import Formular from './components/Formular.js';
 
 function App() {
   return (
     <Router>
       <Navbar />
-        <Switch>
+      <Switch>
         <Route exact path="/">
         <Login />
+        <Formular />
         </Route>
         <Route path="/register">
         <Register />
         </Route>
-
-        <Route path="/main">
-        <Main />
-        </Route>
-
       </Switch>
   </Router>
   );

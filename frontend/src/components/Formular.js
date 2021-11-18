@@ -15,7 +15,8 @@ const Formular =() => {
         })
     }
     
-const sendData =(e)=>{
+const sendData =(e)=>{        <Formular />
+
     e.preventDefault()
 
     axios.post ('http://localhost:4000/register', data)
@@ -29,7 +30,7 @@ const sendData =(e)=>{
     return(
         
         <div class=' p-5 '>
-        <h1 className='mt-5 mb-5'>Using AI to help find answers to common skin conditions</h1>
+        <h1 className='mt-5 mb-5'></h1>
         
         <form className='border  p-5 row p-6' onSubmit={sendData} >
             <div className='col-md-3'>
