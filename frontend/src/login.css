@@ -8,5 +8,8 @@
     font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     border-radius: 20px;
-    
+}
+
+.login h3{
+    font-size: 10px;
 }
