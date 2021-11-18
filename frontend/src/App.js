@@ -1,5 +1,5 @@
 import React from 'react';
-import Login from './Login.jsx';
+import Login from './components/Login.jsx';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -7,12 +7,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import Register from './Register.jsx';
-
+import Register from './components/Register.jsx';
+import Navbar from './components/Navbar.js'
+import "bootstrap/dist/css/bootstrap.min.css" 
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Switch>
         <Route exact path="/">
         <Login />
