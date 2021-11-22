@@ -16,6 +16,8 @@ export default function Login() {
         console.log(JSON.parse(data));
         let changedata = JSON.parse(data);
         if (changedata.email === login.email && changedata.password === login.password) {
+            localStorage.setItem("user", login.email);
+            window.location.reload();
             return alert ("succsess")
         } else {
             return alert (("not match"));
