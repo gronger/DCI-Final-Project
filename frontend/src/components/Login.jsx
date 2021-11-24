@@ -1,9 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import './login.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import { UserContext } from './contexts/UserContext.js';
 
 export default function Login() {
+
+    const [loginStatus, setLoginStatus] = useContext(UserContext);
+
     const [login, setLogin] = useState({
         email: "",
         password:""
@@ -12,16 +16,19 @@ export default function Login() {
     function loginHandler(e) {
 
         e.preventDefault();
-        let data = localStorage.getItem("info");
-        console.log(JSON.parse(data));
-        let changedata = JSON.parse(data);
-        if (changedata.email === login.email && changedata.password === login.password) {
-            localStorage.setItem("user", login.email);
-            window.location.reload();
-            return alert ("succsess")
-        } else {
-            return alert (("not match"));
-        }
+
+        setLoginStatus({isLogin: true})
+        console.log(loginStatus);
+        // let data = localStorage.getItem("info");
+        // console.log(JSON.parse(data));
+        // let changedata = JSON.parse(data);
+        // if (changedata.email === login.email && changedata.password === login.password) {
+        //     localStorage.setItem("user", login.email);
+        //     window.location.reload();
+        //     return alert ("succsess")
+        // } else {
+        //     return alert (("not match"));
+        // }
     }
 
     // const loginHandler = (e) => {
