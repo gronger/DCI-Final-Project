@@ -24,11 +24,34 @@ function Navbar() {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               {loginStatus.isLogin ?
+              <>
               <li class="nav-item">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  Features
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  About
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active mr-3" aria-current="page" href="#">
+                  Contact
+                </a>
+              </li> 
                 <a class="nav-link active" aria-current="page" href="#">
                   Log out
                 </a>
-              </li> : 
+              </li> 
+              </>
+              : 
               <>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
