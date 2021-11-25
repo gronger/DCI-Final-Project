@@ -13,30 +13,31 @@ export default function Login() {
 
     const [login, setLogin] = useState({
         email: "",
-        password:""
+        password: ""
     })
 
+
     async function loginHandler(e) {
+        console.log("befor login", loginStatus);
 
         e.preventDefault();
+        await setLoginStatus({ isLogin: true })
 
-        
-        
-        console.log(loginStatus);
         let data = localStorage.getItem("info");
         console.log(JSON.parse(data));
         let changedata = JSON.parse(data);
         if (changedata.email === login.email && changedata.password === login.password) {
-            await setLoginStatus({isLogin: true})
-            await localStorage.setItem("user", login.email);
-            // window.location.reload();
+            localStorage.setItem("user", login.email);
+            localStorage.setItem("test", true);
             history.push("/main")
-            return alert ("success")
+            console.log("after login", loginStatus);
+            window.location.reload();
+            return console.log("success")
         } else {
-            return alert (("not match"));
+            console.log("not match")
         }
     }
-{/* <Formular /> */}
+
 
     // const loginHandler = (e) => {
     //     e.preventDefault()
@@ -68,9 +69,9 @@ export default function Login() {
     return (
         <div className='login'>
             <form onSubmit={(e) => loginHandler(e)}>
-            <p>Login here</p>
-                <input type="email" value={login.email} onChange={e => setLogin({...login,email:e.target.value})} placeholder="email"></input><br/>
-                <input type="password" value={login.password} onChange={e => setLogin({...login,password:e.target.value})} placeholder="password"></input><br/><br/>
+                <p>Login here</p>
+                <input type="email" value={login.email} onChange={e => setLogin({ ...login, email: e.target.value })} placeholder="email"></input><br />
+                <input type="password" value={login.password} onChange={e => setLogin({ ...login, password: e.target.value })} placeholder="password"></input><br /><br />
                 <button type="submit">Submit</button>
                 <h3>you dont have Account? register<Link to="/register"> here</Link></h3>
             </form>

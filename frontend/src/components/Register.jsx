@@ -13,7 +13,8 @@ export default function Register() {
     function submitHandler(e) {
         e.preventDefault();
         localStorage.setItem("info",JSON.stringify(register))
-        history.push("/formular");
+        // history.push("/formular");
+        history.push("/");
     }
     return (
         <div className='login'>
