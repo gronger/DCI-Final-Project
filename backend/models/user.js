@@ -7,8 +7,11 @@ const required = true;
 const unique = true;
 
 const UserSchema = new Schema({
+    username: { type: String, required, minLength: 3 },
     firstname: { type: String, required, minLength: 3 },
     lastname: { type: String, required, minLength: 3 },
+    height: { type: Number, required, minLength: 2, maxLength: 3 },
+    weight:{ type: Number, required, minLength: 2,maxLength:3 },
     age:{type: Number },
     email: { type: String, required, unique, minLength: 3 },
     password: { type: String, required, minLength: 15 }
