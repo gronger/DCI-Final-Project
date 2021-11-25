@@ -1,7 +1,10 @@
 
 import React, { useState } from "react";
+import { useHistory } from 'react-router-dom';
 
 export default function Register() {
+
+    const history = useHistory();
 
     const [register, setRegister] = useState({
         email: "",
@@ -10,6 +13,7 @@ export default function Register() {
     function submitHandler(e) {
         e.preventDefault();
         localStorage.setItem("info",JSON.stringify(register))
+        history.push("/formular");
     }
     return (
         <div className='login'>

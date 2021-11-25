@@ -6,23 +6,20 @@ import Register from "./Register.jsx";
 import Navbar from "./Navbar.js";
 import Login from "./Login";
 import Formular from "./Formular.js";
-
-
+import Main from "./Main.jsx";
 
 function Navigation() {
+  const user = localStorage.getItem("user");
 
+  // if (user) {
+  //     return (
+  //       <div>
+  //         <h1>{user}</h1>
 
-const user = localStorage.getItem("user");
-
-    if (user) {
-        return (
-          <div>
-            <h1>{user}</h1>
-            <Formular />
-            <Logout />
-          </div>
-        )
-      }
+  //         <Main />
+  //       </div>
+  //     )
+  //   }
 
   return (
     <div>
@@ -30,14 +27,25 @@ const user = localStorage.getItem("user");
         <Navbar />
 
         <Switch>
-          <Route exact path="/">
-            <Login />
-          </Route>
+          {!user ? (
+            <>
+              <Route exact path="/">
+                <Login />
+              </Route>
 
-          <Route path="/register">
-            <Register />
-          </Route>
+              <Route path="/register">
+                <Register />
+              </Route>
 
+              <Route path="/formular">
+                <Formular />
+              </Route>
+            </>
+          ) : (
+            <Route path="/main">
+              <Main />
+            </Route>
+          )}
         </Switch>
       </Router>
     </div>

@@ -3,8 +3,11 @@ import './login.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from './contexts/UserContext.js';
+import { useHistory } from 'react-router-dom';
 
 export default function Login() {
+
+    const history = useHistory();
 
     const [loginStatus, setLoginStatus] = useContext(UserContext);
 
@@ -13,23 +16,27 @@ export default function Login() {
         password:""
     })
 
-    function loginHandler(e) {
+    async function loginHandler(e) {
 
         e.preventDefault();
 
-        setLoginStatus({isLogin: true})
+        
+        
         console.log(loginStatus);
-        // let data = localStorage.getItem("info");
-        // console.log(JSON.parse(data));
-        // let changedata = JSON.parse(data);
-        // if (changedata.email === login.email && changedata.password === login.password) {
-        //     localStorage.setItem("user", login.email);
-        //     window.location.reload();
-        //     return alert ("succsess")
-        // } else {
-        //     return alert (("not match"));
-        // }
+        let data = localStorage.getItem("info");
+        console.log(JSON.parse(data));
+        let changedata = JSON.parse(data);
+        if (changedata.email === login.email && changedata.password === login.password) {
+            await setLoginStatus({isLogin: true})
+            await localStorage.setItem("user", login.email);
+            // window.location.reload();
+            history.push("/main")
+            return alert ("success")
+        } else {
+            return alert (("not match"));
+        }
     }
+{/* <Formular /> */}
 
     // const loginHandler = (e) => {
     //     e.preventDefault()
