@@ -1,7 +1,12 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "./contexts/UserContext.js";
+import Logout from './Logout.jsx'
+import { Link } from 'react-router-dom'
+
 
 function Navbar() {
+  const isLogged = localStorage.getItem("test");
+
 
   const [loginStatus, setLoginStatus] = useContext(UserContext);
 
@@ -23,58 +28,59 @@ function Navbar() {
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-              {loginStatus.isLogin ?
-              <>
-              <li class="nav-item">
-                <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Features
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  About
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active mr-3" aria-current="page" href="#">
-                  Contact
-                </a>
-              </li> 
-                <a class="nav-link active" aria-current="page" href="#">
-                  Log out
-                </a>
-              </li> 
-              </>
-              : 
-              <>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Home
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  Features
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">
-                  About
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active mr-3" aria-current="page" href="#">
-                  Contact
-                </a>
-              </li> 
-              </>
-              } 
+              {isLogged ?
+                <>
+                  <li class="nav-item">
+                    <li class="nav-item">
+                      <Link to="/" className="nav-link active">Home</Link>
+                    </li>
+                    <li class="nav-item">
+                      <Link to="/features" className="nav-link active">
+                        Features
+                      </Link>
+                    </li>
+                    <li class="nav-item">
+                      <Link to="/about" className="nav-link active">
+                        About
+                      </Link>
+                    </li>
+                    <li class="nav-item">
+                      <Link to="/contact" className="nav-link active">
+                        contact
+                      </Link>
+                    </li>
+                    <li>
+                      <Logout />
+                    </li>
+                  </li>
+                </>
+                :
+                <>
+                  <li class="nav-item">
+                    <Link to="/" className="nav-link active">Home</Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link to="/features" className="nav-link active">
+                      Features
+                    </Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link to="/about" className="nav-link active">
+                      About
+                    </Link>
+                  </li>
+                  <li class="nav-item">
+                    <Link to="/contact" className="nav-link active">
+                      contact
+                    </Link>
+                  </li>
+
+                  {/* <li>
+                    <Logout />
+                  </li> */}
+
+                </>
+              }
             </ul>
           </div>
         </div>

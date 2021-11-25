@@ -1,4 +1,3 @@
-import react, { Component } from 'react';
 import { useHistory } from 'react-router-dom';
 
 export default function Logout() {
@@ -8,8 +7,8 @@ export default function Logout() {
 
     function logout() {
         localStorage.clear();
-        window.location.reload();  
         history.push("/")
+        window.location.reload();  
     }
 
     return (
