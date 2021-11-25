@@ -1,7 +1,10 @@
-import React,{Fragment, useState} from 'react' 
-import axios from 'axios'
+import React,{Fragment, useState} from 'react';
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 
 const Formular =() => {
+
+    const history = useHistory();
 
     const [data, setData] = useState({
    
@@ -15,13 +18,16 @@ const Formular =() => {
         })
     }
     
-const sendData =(e)=>{        <Formular />
+const sendData = async (e) => {        
+{/* <Formular /> */}
 
     e.preventDefault()
 
-    axios.post ('http://localhost:4000/register', data)
+    await axios.post ('http://localhost:4000/register', data)
     .then(response => console.log(response.data)) 
     .catch(error => console.log(error))
+
+    history.push("/");
 
     console.log(data.name + ' ' + data.lastname + ' '+ data.Age)
 
