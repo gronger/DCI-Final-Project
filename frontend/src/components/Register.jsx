@@ -15,6 +15,7 @@ export default function Register() {
         localStorage.setItem("info",JSON.stringify(register))
         // history.push("/formular");
         history.push("/");
+        // the above redirects the user to the the login page, ("/formular") redirects user to the form !!
     }
     return (
         <div className='login'>
