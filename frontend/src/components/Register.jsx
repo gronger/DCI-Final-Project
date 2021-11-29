@@ -1,8 +1,10 @@
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { useHistory } from 'react-router-dom';
 
 export default function Register() {
+ 
 
     const history = useHistory();
 
@@ -13,8 +15,8 @@ export default function Register() {
     function submitHandler(e) {
         e.preventDefault();
         localStorage.setItem("info",JSON.stringify(register))
-        // history.push("/formular");
-        history.push("/");
+        history.push("/formular");
+        // history.push("/");
         // the above redirects the user to the the login page, ("/formular") redirects user to the form !!
     }
     return (
