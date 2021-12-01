@@ -19,7 +19,7 @@ app.post('/register', async (req, res) => {
         if (!user) {
             return res.status(400).json({ message: "something went wrong" })
         }
-
+        user.userType
         return res.status(200).json(user)
     }
     res.json({ message: "something went wrong" })
@@ -46,6 +46,16 @@ app.post('/message', (req, res) => {
         return res.status(200).json(req.body)
     }
     res.json({ message: "something message" })
+})
+
+app.post('/api/user', async (req, res) => {
+    console.log(req.body);
+    const getuser = await User.findOne({ email: req.body.email })
+    if (getuser) {
+        console.log(userEmail);
+        return res.json(getuser)
+    }
+    res.json({ message:"Wrooooooooooooong" })
 })
 
 app.listen(5000, () => console.log("server is running"));
