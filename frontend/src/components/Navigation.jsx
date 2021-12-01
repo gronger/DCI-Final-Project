@@ -5,7 +5,7 @@ import Logout from "./Logout.jsx";
 import Register from "./Register.jsx";
 import Navbar from "./Navbar.js";
 import Login from "./Login";
-import Formular from "./Formular.js";
+import Formular from "./Formular.jsx";
 import Main from "./Main.jsx";
 
 function Navigation() {
