@@ -49,7 +49,6 @@ app.post('/message', (req, res) => {
 })
 
 app.post('/api/user', async (req, res) => {
-    console.log("plzzzzzzzzzzzzzzz");
     console.log(req.body);
     const getuser = await User.findOne({ email: req.body.email })
     if (getuser) {
