@@ -2,11 +2,11 @@ import React, { useState, useContext } from "react";
 import { UserContext } from "./contexts/UserContext.js";
 import Logout from './Logout.jsx'
 import { Link } from 'react-router-dom'
+import MyProfile from './MyProfile.jsx';
 
 
 function Navbar() {
   const isLogged = localStorage.getItem("test");
-
 
   const [loginStatus, setLoginStatus] = useContext(UserContext);
 
@@ -49,6 +49,12 @@ function Navbar() {
                         contact
                       </Link>
                     </li>
+                    <li class="nav-item">
+                      <Link to="/myprofile" className="nav-link active">
+                        Myprofile
+                      </Link>
+                    </li>
+
                     <li>
                       <Logout />
                     </li>

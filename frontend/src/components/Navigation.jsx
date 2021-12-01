@@ -7,6 +7,7 @@ import Navbar from "./Navbar.js";
 import Login from "./Login";
 import Formular from "./Formular.js";
 import Main from "./Main.jsx";
+import MyProfile from "./MyProfile.jsx";
 
 function Navigation() {
   const user = localStorage.getItem("user");
@@ -42,9 +43,14 @@ function Navigation() {
               </Route>
             </>
           ) : (
+              <>
             <Route path="/main">
               <Main />
+              </Route>
+              <Route path="/myprofile">
+              <MyProfile />
             </Route>
+            </>
           )}
         </Switch>
       </Router>

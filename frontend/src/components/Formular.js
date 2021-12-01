@@ -5,8 +5,6 @@ import { useHistory } from 'react-router-dom';
 const Formular = () => {
     const [fakeUser, setFakeUser] = useState()
 
-
-
     console.log("this comes from fake user", fakeUser);
 
     const history = useHistory();
@@ -116,7 +114,6 @@ const Formular = () => {
                 </div>
 
 
-
                 <div className='col-md-3' class='mt-2' >
                     <input
                         required
@@ -139,7 +136,6 @@ const Formular = () => {
                         onChange={handleInputChange}
                     ></input>
 
-
                     <input className='btn btn-danger mb-5 mt-5 ' onChange={handleInputChange} type="file" id="myFile" name="filename" />
 
                 </div>
@@ -150,7 +146,6 @@ const Formular = () => {
 
         </div>
     )
-
 }
 
 export default Formular
