@@ -48,5 +48,15 @@ app.post('/message', (req, res) => {
     res.json({ message: "something message" })
 })
 
+app.post('/api/user', async (req, res) => {
+    console.log(req.body);
+    const getuser = await User.findOne({ email: req.body.email })
+    if (getuser) {
+        console.log(userEmail);
+        return res.json(getuser)
+    }
+    res.json({ message:"Wrooooooooooooong" })
+})
+
 app.listen(5000, () => console.log("server is running"));
 

@@ -26,7 +26,7 @@ export default function Login() {
                 if (response.status === 200) {
 
                     //setIsLoggedin({ ...isLoggedin, isUser: true })
-                    localStorage.setItem("user", response.data.username)
+                    localStorage.setItem("user", JSON.stringify(response.data))
                     console.log("this is come from BE", response.data)
                     localStorage.setItem("test", true);
                     history.push("/main")
@@ -36,34 +36,6 @@ export default function Login() {
             })
             .catch(error => console.log(error));
     }
-
-
-    // const loginHandler = (e) => {
-    //     e.preventDefault()
-    //     console.log("User is Logged in");
-
-    //     function setIsLoggedin() {
-
-    //     }
-
-    //     let user = "user111";
-    //     let isLoggedin = "isloggggedin";
-    //     let history = "hissstory";
-
-    //     axios.post("http://localhost:5000/login", user)
-    //         .then(response => {
-    //             console.log(response.data)
-    //             if (response.status === 200) {
-    //                 setIsLoggedin({ ...isLoggedin, isUser: true })
-    //                 localStorage.setItem("user",response.data.username)
-    //                 return history.push('/messages')
-    //             }
-    //         })
-    //         .catch(err => console.log(err))
-
-
-    // }
-
 
     return (
         <div className='login'>

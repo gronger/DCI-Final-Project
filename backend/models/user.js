@@ -64,6 +64,10 @@ UserSchema.statics.login = async (userData) => {
   if (!user) {
     return null;
   }
+  const sucsess = await compare(userData.password, user.password)
+  if (!sucsess) {
+      return null
+  }
   return user.toJSON();
 };
 //to dont send password to client https://stackoverflow.com/questions/32390996/remove-one-property-from-mongoose-tojson-support
