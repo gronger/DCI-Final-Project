@@ -6,7 +6,7 @@ export function connect() {
  
 
     // Destructure DB variables from environment variables
-    const { DB_USER, DB_PASS, DB_HOST, DB_NAME,dbpassword } = process.env;
+    const { dbpassword } = process.env;
     
     //const connectionString = `mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}`;
     const connectionString = `mongodb+srv://finalproject:${dbpassword}@ronnie.qfioj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
