@@ -1,6 +1,8 @@
-
+*{
+    
+}
 
 body {
-    background-image:url(./img/Bg.jpg);
+    background-color: aqua;
     background-size: cover;
 }
