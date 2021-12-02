@@ -55,7 +55,7 @@ app.post('/api/user', async (req, res) => {
         console.log(userEmail);
         return res.json(getuser)
     }
-    res.json({ message:"Wrooooooooooooong" })
+    res.json({ message: "Wrooooooooooooong" })
 })
 
 app.listen(5000, () => console.log("server is running"));
