@@ -9,11 +9,13 @@ export default function MyProfile() {
     useEffect(async () => {
         const data = localStorage.getItem("user");
         setLocaldata(JSON.parse(data))
+        console.log(localdata);
         //console.log(JSON.parse(data));
         //await axios.post('http://localhost:5000/api/user', { email: data })
         //    .then(response => console.log("THIS IS ALL DATA", response.data))
         //    .catch(error => console.log(error))
     }, [])
+
 
     return (
         <div>
