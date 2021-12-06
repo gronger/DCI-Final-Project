@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 function TalentPro(props) {
 
     const handleInputChange = props.handleInputChange;
@@ -9,12 +8,13 @@ function TalentPro(props) {
 
   return (
 
-    <div id="talent-registration" class=" p-5 ">
+    <div  id="talent-registration" class=" p-5 ">
       <h1 className="mt-5 mb-5"></h1>
 
       <form className="border  p-5 row p-6" onSubmit={sendData}>
-        <div className="col-md-3">
-          <input
+        <div  className="col-md-3">
+         <div className="prueba">
+          <input 
             required
             placeholder="Name"
             className="form-control"
@@ -22,6 +22,8 @@ function TalentPro(props) {
             name="firstname"
             onChange={handleInputChange}
           ></input>
+          </div>
+
         </div>
 
         <div className="col-md-3">
