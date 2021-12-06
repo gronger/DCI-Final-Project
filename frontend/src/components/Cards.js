@@ -1,7 +1,5 @@
 import React from 'react'
 import './Cards.css'
-
-
  
 function Cards(title, imageUrl, body) {
     return (
@@ -10,7 +8,7 @@ function Cards(title, imageUrl, body) {
             <img src ={imageUrl} alt='' />
             </div>
 
-            <div className="card-content" >
+            register<div className="card-content" >
                  <div className="card-title" >
                      {title}
                  </div>

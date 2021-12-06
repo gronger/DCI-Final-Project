@@ -39,11 +39,15 @@ function Navigation() {
                 <Register />
               </Route>
             
-
               <Route path="/formular">
                 <Formular />
               </Route>
-              
+
+              <Route path="/cards">
+                <Cards />
+              </Route>
+
+
             </>
           ) : (
               <>
