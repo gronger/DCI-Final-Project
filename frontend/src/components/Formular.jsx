@@ -3,7 +3,7 @@ import axios from "axios";
 import { useHistory } from "react-router-dom";
 import RegisterTalentForm from './RegisterTalentForm.jsx';
 import RegisterProForm from './RegisterProForm.jsx';
-
+import './formular.css'
 
 const Formular = () => {
   const [fakeUser, setFakeUser] = useState();
@@ -37,7 +37,7 @@ const Formular = () => {
   // avoid autmatic processing
   return (
     <div>
-      <div>
+      <div className="form">
         <label>What kind of account would you like to create?</label>
 
         <div

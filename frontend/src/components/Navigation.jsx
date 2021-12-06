@@ -8,6 +8,7 @@ import Login from "./Login";
 import Formular from "./Formular.jsx";
 import Main from "./Main.jsx";
 import MyProfile from "./MyProfile.jsx";
+import Cards from './Cards.js'
 
 function Navigation() {
   const user = localStorage.getItem("user");
@@ -37,10 +38,12 @@ function Navigation() {
               <Route path="/register">
                 <Register />
               </Route>
+            
 
               <Route path="/formular">
                 <Formular />
               </Route>
+              
             </>
           ) : (
               <>
@@ -50,6 +53,7 @@ function Navigation() {
               <Route path="/myprofile">
               <MyProfile />
             </Route>
+
             </>
           )}
         </Switch>

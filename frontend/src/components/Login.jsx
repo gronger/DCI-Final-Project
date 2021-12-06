@@ -41,7 +41,9 @@ export default function Login() {
         <div className='login'>
             <form onSubmit={loginHandler}>
                 <p>Login here</p>
+                <div className="prueba" >
                 <input type="email" value={login.email} onChange={e => setLogin({ ...login, email: e.target.value })} placeholder="email"></input><br />
+                 </div>
                 <input type="password" value={login.password} onChange={e => setLogin({ ...login, password: e.target.value })} placeholder="password"></input><br /><br />
                 <button type="submit">Submit</button>
                 <h3>you dont have Account? register<Link to="/formular"> here</Link></h3>

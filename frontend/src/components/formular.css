@@ -1,0 +1,20 @@
+.form{
+    border: rgb(214, 188, 42) 1 px solid;
+    margin-left: 750px;
+    text-align: 0;
+ 
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+input{
+     
+     border: rgb(188, 255, 80) 1 px solid;
+}
+
+
+
+label{
+   
+    text-align: center;
+}

@@ -1,3 +1,10 @@
+
+body{
+    background-color: rgb(28, 124, 92);
+}
+
+
+
 .login{
     width:30%;
     height: 50%;
@@ -8,6 +15,7 @@
     font-size: 25px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     border-radius: 50px;
+    
 }
 
 .login h3{
@@ -16,13 +24,18 @@
 
 
 .login input{
+
+margin-bottom: 5px;
+margin-top: 5px;
+padding: 2px;
 width: 270px;
 border-radius: 20px;
 box-shadow: 0,0,0,0,0.3;
 }
 
-
-
-body{
-    background-color: rgb(28, 124, 92);
+.login button{
+    color: coral;
+    border-radius: 20px;
+    
 }
+
