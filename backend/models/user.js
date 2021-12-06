@@ -6,12 +6,12 @@ const required = true;
 const unique = true;
 
 const UserSchema = new Schema({
-//   accountType: { type: Number, required },
+  //   accountType: { type: Number, required },
   username: { type: String, required, minLength: 3 },
   firstname: { type: String, required, minLength: 3 },
   lastname: { type: String, required, minLength: 3 },
   typeUser: { type: String, enum: ["talent", "pro"] },
-
+  password: { type: String, required, minLength: 4 },
   height: {
     type: Number,
     required: function () {
@@ -66,7 +66,7 @@ UserSchema.statics.login = async (userData) => {
   }
   const sucsess = await compare(userData.password, user.password)
   if (!sucsess) {
-      return null
+    return null
   }
   return user.toJSON();
 };

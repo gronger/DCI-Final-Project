@@ -8,6 +8,9 @@ Content-Type: application/json
     "password":"124455"
 }
 
+###
+GET http://localhost:5000/getuser
+
 
 ###
 POST http://localhost:5000/login

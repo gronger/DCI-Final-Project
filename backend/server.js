@@ -17,35 +17,45 @@ app.post('/register', async (req, res) => {
     if (req.body) {
         const user = await User.register(req.body);
         if (!user) {
-            return res.status(400).json({ message: "something went wrong" })
+            return res.status(400).json({ message: "Error from register" })
         }
         user.userType
         return res.status(200).json(user)
     }
-    res.json({ message: "something went wrong" })
+    res.json({ message: "Error from register" })
 })
 
 app.post('/login', async (req, res) => {
     const user = await User.login(req.body);
-    if (user.password == req.body.password) {
-        return res.status(200).json(req.body)
-
+    if (user) {
+        return res.status(200).json(user)
     }
-    res.json({ message: "something went wrong :l" })
+    res.json({ message: "Error from login" })
 })
+
+app.get('/getuser', async(req, res) => {
+    const user = await User.find({});
+    if (user) {
+        return res.json(user)
+    }
+    res.json({message: "Error from getuser"})
+
+})
+
+
 
 app.post('/main', (req, res) => {
     if (req.body) {
         return res.status(200).json(req.body)
     }
-    res.json({ message: "something went wrong :l" })
+    res.json({ message: "Error from main" })
 })
 
 app.post('/message', (req, res) => {
     if (req.body) {
         return res.status(200).json(req.body)
     }
-    res.json({ message: "something message" })
+    res.json({ message: "Error from message" })
 })
 
 app.post('/api/user', async (req, res) => {
@@ -55,7 +65,7 @@ app.post('/api/user', async (req, res) => {
         console.log(userEmail);
         return res.json(getuser)
     }
-    res.json({ message: "Wrooooooooooooong" })
+    res.json({ message: "Error from api/user" })
 })
 
 app.listen(5000, () => console.log("server is running"));
