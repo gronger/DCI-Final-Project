@@ -84,7 +84,7 @@ function TalentPro(props) {
         <div className="col-md-3" class="mt-2">
           <input
             required
-            placeholder="please write down in Cm"
+            placeholder="Cm."
             className="form-control"
             type="text"
             name="height"
@@ -95,7 +95,7 @@ function TalentPro(props) {
         <div className="col-md-3 " class="mt-2">
           <input
             required
-            placeholder="Kg"
+            placeholder="Kg."
             className="form-control"
             type="text"
             name="weight"
