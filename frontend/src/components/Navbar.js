@@ -6,7 +6,7 @@ import MyProfile from './MyProfile.jsx';
 
 
 function Navbar() {
-  const isLogged = localStorage.getItem("test");
+  const isLogged = localStorage.getItem("user");
 
   const [loginStatus, setLoginStatus] = useContext(UserContext);
 
