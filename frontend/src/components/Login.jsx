@@ -24,12 +24,12 @@ export default function Login() {
         await axios.post('http://localhost:5000/login', login)
             .then(response => {
                 if (response.status === 200) {
-
+            console.log(response.data);
                     //setIsLoggedin({ ...isLoggedin, isUser: true })
-                    localStorage.setItem("user", JSON.stringify(response.data))
-                    console.log("this is come from BE", response.data)
-                    localStorage.setItem("test", true);
-                    history.push("/main")
+                    localStorage.setItem("user", JSON.stringify(response.data.user))
+                    localStorage.setItem("jwt", (response.data.token))
+                    // console.log("this is come from BE", response.data)
+                    // history.push("/main")
                     window.location.reload();
                 }
 

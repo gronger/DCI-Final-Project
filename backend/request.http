@@ -11,6 +11,9 @@ Content-Type: application/json
 ###
 GET http://localhost:5000/getuser
 
+###
+GET http://localhost:5000/getfile
+
 
 ###
 POST http://localhost:5000/login
