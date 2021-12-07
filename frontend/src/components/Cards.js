@@ -1,19 +1,34 @@
 import React from 'react'
 import './Cards.css'
- 
-function Cards(title, imageUrl, body) {
+
+//const imageUrl='https://media.istockphoto.com/vectors/atlas-holding-the-world-vector-id1003206734'
+
+function Cards({username, imageUrl, typeuser, age}) {
     return (
+
+        <div  >
+         {/* <h1>{}</h1>*/}
+
+
         <div className="card-container" >
+            
+                 <div  className="card-typeuser" >
+                     <p>{typeuser}</p>
+                 </div>
+                 
             <div className="image-container" >
             <img src ={imageUrl} alt='' />
             </div>
 
-            register<div className="card-content" >
-                 <div className="card-title" >
-                     {title}
+            <div className="card-content" >
+                 <div className="card-username" >
+                   <p>{username}</p>  
                  </div>
-                 <div  className="card-body" >
-                     <p>{body}</p>
+            </div>
+
+            <div className="card-content" >
+                 <div className="card-age" >
+                   <p>Age:{age}</p>  
                  </div>
             </div>
             
@@ -25,6 +40,8 @@ function Cards(title, imageUrl, body) {
                 </button>
             </div>
 
+        </div>
+        
         </div>
     )
 }

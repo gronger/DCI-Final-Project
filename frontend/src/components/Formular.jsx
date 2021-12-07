@@ -45,11 +45,11 @@ const Formular = () => {
         >
           <input
             type="radio"
-            id="talent"
+            id="Talent"
             name="typeUser"
-            value="talent"
+            value="Talent"
           />
-          <label for="talent">Talent</label>
+          <label for="Talent">Talent</label>
         </div>
 
         <div

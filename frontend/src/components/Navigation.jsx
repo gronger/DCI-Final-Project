@@ -10,6 +10,7 @@ import Main from "./Main.jsx";
 import MyProfile from "./MyProfile.jsx";
 import Cards from './Cards.js'
 
+
 function Navigation() {
   const user = localStorage.getItem("user");
 
@@ -42,10 +43,7 @@ function Navigation() {
               <Route path="/formular">
                 <Formular />
               </Route>
-
-              <Route path="/cards">
-                <Cards />
-              </Route>
+             
 
 
             </>

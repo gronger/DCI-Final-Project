@@ -10,12 +10,12 @@ const UserSchema = new Schema({
   username: { type: String, required, minLength: 3 },
   firstname: { type: String, required, minLength: 3 },
   lastname: { type: String, required, minLength: 3 },
-  typeUser: { type: String, enum: ["talent", "pro"] },
+  typeUser: { type: String, enum: ["Talent", "Pro"] },
   password: { type: String, required, minLength: 4 },
   height: {
     type: Number,
     required: function () {
-      return this.typeUser === "talent";
+      return this.typeUser === "Talent";
     },
     minLength: 2,
     maxLength: 3,
@@ -23,7 +23,7 @@ const UserSchema = new Schema({
   weight: {
     type: Number,
     required: function () {
-      return this.typeUser === "talent";
+      return this.typeUser === "Talent";
     },
     minLength: 2,
     maxLength: 3,
