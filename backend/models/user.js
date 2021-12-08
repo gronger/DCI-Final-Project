@@ -39,8 +39,12 @@ const UserSchema = new Schema({
     type: String,
     required: function () {
       return this.typeUser === "pro";
-    },
+    }
   },
+
+  path: { type: String },
+  
+  originalname: { type: String },
 
   age: { type: Number },
   email: { type: String, required, unique, minLength: 3 },

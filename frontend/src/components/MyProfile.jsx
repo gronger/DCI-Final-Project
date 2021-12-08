@@ -60,12 +60,16 @@ export default function MyProfile() {
 
 
     function saveInfos() {
-        const token=localStorage.getItem("jwt");
+        const token = localStorage.getItem("jwt");
         const config = {
-            headers: { authorization: 'Bearer ' + token },
+            headers: {
+                authorization: 'Bearer ' + token,
+                "content-type": "application/json"
+            },
             method: "PUT",
-            body: localdata
+            body: JSON.stringify(localdata)
         };
+        console.log(config);
 
         fetch("http://localhost:5000/save", config)
             .then(res => {
