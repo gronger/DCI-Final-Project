@@ -29,7 +29,7 @@ export default function Login() {
                     localStorage.setItem("user", JSON.stringify(response.data.user))
                     localStorage.setItem("jwt", (response.data.token))
                     // console.log("this is come from BE", response.data)
-                    // history.push("/main")
+                    history.push("/main")
                     window.location.reload();
                 }
 
