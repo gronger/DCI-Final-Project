@@ -9,7 +9,8 @@ import Formular from "./Formular.jsx";
 import Main from "./Main.jsx";
 import MyProfile from "./MyProfile.jsx";
 import Cards from './Cards.js'
-
+import About from "./about.jsx";
+import Contact from "./contact.jsx"
 
 function Navigation() {
   const user = localStorage.getItem("user");
@@ -43,7 +44,14 @@ function Navigation() {
               <Route path="/formular">
                 <Formular />
               </Route>
-             
+
+              <Route path="/about">
+                <About />
+              </Route>
+
+              <Route path="/contact">
+                <Contact />
+              </Route>
 
 
             </>
@@ -55,6 +63,15 @@ function Navigation() {
               <Route path="/myprofile">
               <MyProfile />
             </Route>
+
+              <Route path="/about">
+                <About />
+              </Route>
+
+              <Route path="/contact">
+                <Contact />
+              </Route>
+
 
             </>
           )}

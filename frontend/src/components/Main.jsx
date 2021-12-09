@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Cards from './Cards';
 import './Cards.css'
 import TinderCards from './TinderCards.js';
-import TinderCard from 'react-tinder-card'
+import TinderCard from 'react-tinder-card';
 
 export default function Main() {
 
@@ -24,6 +24,7 @@ export default function Main() {
 
     return (
         <div>
+
 
             <h1>Welcome to NameOfApp</h1>
             <div className="main titere">

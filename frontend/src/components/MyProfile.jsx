@@ -125,6 +125,11 @@ export default function MyProfile() {
                     <input disabled={isDisabled} type="text" onChange={handleChange} name="lastname" value={localdata.lastname} />
                 </div>
 
+                <div className="user-username">User name</div>
+                <div className="user-data-value">
+                    <input type="text" value={localdata.lastname} />
+                </div>
+
                 <div className="user-age">Age</div>
                 <div className="user-data-value">
                     <input disabled={isDisabled} type="text" onChange={handleChange} name="age" value={localdata.age} />
@@ -134,6 +139,12 @@ export default function MyProfile() {
                 <div className="user-data-value">
                     <input disabled={isDisabled} type="text" onChange={handleChange} name="username" value={localdata.username} />
                 </div>
+
+                <div className="user-description">Description</div>
+                <div className="user-data-description">
+                    <input className="description" type="text" value={localdata.age} />
+                </div>
+
                 <br />
                 <button onClick={saveInfos}>save</button>
             </div>

@@ -62,18 +62,19 @@ const Formular = () => {
     <div>
       <div className="form">
         <label>What kind of account would you like to create?</label>
-
         <div
           onChange={handleInputChange}
         >
+          <div className="prueba">
+          <label className="label" for="talent">Talent</label>
           <input
             type="radio"
-            id="Talent"
+            id="talent"
             name="typeUser"
-            value="Talent"
+            value="talent"
           />
-          <label for="Talent">Talent</label>
-        </div>
+        </div> 
+      </div>
 
         <div
           onChange={handleInputChange}
