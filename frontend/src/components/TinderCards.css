@@ -3,7 +3,7 @@
     width: 600px;
     padding:20px;
     max-width: 85vw;
-    height: 50vh;
+    height: 60vh;
     color: red;
     border-radius: 20px;
     background-size:cover;
@@ -11,16 +11,13 @@
 }
 
 
-.card>p{
+/* .card>p{
     position: flex;
     justify-content: space-around;
     bottom:10px;
     color:black;
-}
+} */
 
-.card-content{
-    color: red;
-}
 
 .tinderCards__cardContainer{
     display:flex;
@@ -30,4 +27,24 @@
 
 .swipe{
     position: absolute;
+}
+
+img{
+    width: 100%;
+    height: 92%;
+}
+
+.card-title{
+    width: 100%;
+    padding: 20px;
+    background-color: blue;
+}
+
+.card-img{
+    width: 100%;
+    height: 300px;
+}
+
+.card-info>p{
+    color: brown;
 }
