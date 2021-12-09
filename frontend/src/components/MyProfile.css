@@ -1,10 +1,23 @@
+
+h1{
+    text-align: center;
+}
 .user-data{
+    text-align: center;
     margin: 1em;
     padding: 1em;
     border: 1px solid;
     background: rgba(126, 141, 126, 0.3);
+
 }
 .user-data-label{
     width: 300px;
 }
 .user-data-value{}
+
+
+
+.description{
+ 
+    height: 100px;
+}
