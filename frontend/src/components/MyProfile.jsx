@@ -70,6 +70,7 @@ export default function MyProfile() {
             body: JSON.stringify(localdata)
         };
         console.log(config);
+        console.log("yeaa");
 
         fetch("http://localhost:5000/save", config)
             .then(res => {
