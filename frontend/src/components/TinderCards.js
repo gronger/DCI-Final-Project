@@ -19,29 +19,25 @@ function TinderCards(props) {
                         className="swipe"
                         /*key={person.name}*/
                         preventSwipe={['up', 'down']}
-                        
+
                     >
                         <div
                             style={{ backgroundImage: `url(${person.url})` }}
                             className="card">
-                            <h3 className={person.typeUser=="Pro" ? "pro" : "talent" }>{person.typeUser}</h3>
-                            <h3>{person.firstname} {person.lastname}</h3>
-                            <img src={getProfileImg(person)} />
+                            <div className="card-title">
+                                <h3 className={person.typeUser == "Pro" ? "pro" : "talent"}>{person.firstname} {person.lastname}</h3>
+                            </div>
+                            <div className="card-img">
+                                <img src={getProfileImg(person)} />
+                            </div>
+
+                            <div className="card-info">
                                 <p>{person.username}</p>
                                 <p>{person.age}</p>
-                            <div className="card-content">
-
-                            
-                           </div> 
-
-                            <div className="btnn">
-                            <button > 
-                            View Profile
-                            </button>
                             </div>
 
                         </div>
-                        
+
                     </TinderCard>
                 ))}
             </div>
