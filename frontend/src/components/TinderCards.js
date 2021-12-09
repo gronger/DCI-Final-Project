@@ -19,6 +19,7 @@ function TinderCards(props) {
                         className="swipe"
                         /*key={person.name}*/
                         preventSwipe={['up', 'down']}
+                        
                     >
                         <div
                             style={{ backgroundImage: `url(${person.url})` }}
