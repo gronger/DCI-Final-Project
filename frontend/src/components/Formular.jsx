@@ -45,7 +45,7 @@ const Formular = () => {
     fetch("http://localhost:5000/register", config)
       .then((response) => console.log(response))
       .catch((error) => console.log(error));
-    // history.push("/");
+    history.push("/");
 
   };
 
