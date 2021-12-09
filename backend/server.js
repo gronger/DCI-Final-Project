@@ -41,9 +41,6 @@ function checkTokenMiddleware(req, res, next) {
     });
 }
 
-
-
-
 const upload = multer({ dest: 'uploads/' });
 
 //file upload endpoint

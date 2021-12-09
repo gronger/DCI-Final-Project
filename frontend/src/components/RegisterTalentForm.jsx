@@ -5,6 +5,10 @@ function TalentPro(props) {
     const data = props.data;
     const sendData = props.sendData;
 
+    function changeFile(e) {
+      props.setFile(e.target.files[0])
+      console.log(e.target.files);
+    }
 
   return (
 
@@ -104,10 +108,10 @@ function TalentPro(props) {
 
           <input
             className="btn btn-danger mb-5 mt-5 "
-            onChange={handleInputChange}
+            onChange={changeFile}
             type="file"
             id="myFile"
-            name="filename"
+            name="selectedfile"
           />
         </div>
         <button className="btn btn-primary" type="submit">
@@ -115,9 +119,6 @@ function TalentPro(props) {
         </button>
       </form>
 
-      <h3 className="ml-5  mb-5 mt-5 ">
-        {data.name} - {data.lastname} -{data.Age} - {data.Height} -{data.Weight}{" "}
-      </h3>
     </div>
   );
 }

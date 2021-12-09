@@ -35,7 +35,8 @@ const Formular = () => {
     formData.append("age", data.age);
     formData.append("activity", data.activity);
     formData.append("lookingFor", data.lookingFor);
-
+    formData.append("height", data.height);
+    formData.append("weight", data.weight);
 
     const config = {
       method: "POST",
@@ -54,27 +55,22 @@ const Formular = () => {
     console.log(e.target.files);
   }
 
-  function test() {
-    console.log("test");
-  }
-
   return (
     <div>
       <div className="form">
         <label>What kind of account would you like to create?</label>
+
         <div
           onChange={handleInputChange}
         >
-          <div className="prueba">
-          <label className="label" for="talent">Talent</label>
           <input
             type="radio"
-            id="talent"
+            id="Talent"
             name="typeUser"
-            value="talent"
+            value="Talent"
           />
-        </div> 
-      </div>
+          <label for="Talent">Talent</label>
+        </div>
 
         <div
           onChange={handleInputChange}
@@ -97,7 +93,8 @@ const Formular = () => {
           data={data}
           handleInputChange={handleInputChange}
           sendData={sendData}
-
+          file={file}
+          setFile={setFile}
         />
       )}
       {data.typeUser === "Pro" && (
