@@ -37,10 +37,21 @@ export default function MyProfile() {
                     <input type="text" value={localdata.lastname} />
                 </div>
 
+                <div className="user-username">User name</div>
+                <div className="user-data-value">
+                    <input type="text" value={localdata.lastname} />
+                </div>
+
                 <div className="user-age">Age</div>
                 <div className="user-data-value">
                     <input type="text" value={localdata.age} />
                 </div>
+
+                <div className="user-description">Description</div>
+                <div className="user-data-description">
+                    <input className="description" type="text" value={localdata.age} />
+                </div>
+
             </div>
 
 

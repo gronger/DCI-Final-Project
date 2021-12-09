@@ -19,15 +19,22 @@ function TinderCards(props) {
                         <div
                             style={{ backgroundImage: `url(${person.url})` }}
                             className="card">
-                            <h3>{person.firstname} {person.lastname}</h3>
+                            <h3 className={person.typeUser=="Pro" ? "pro" : "talent" }>{person.typeUser}</h3>
                                 <p>{person.username}</p>
                                 <p>{person.age}</p>
                             <div className="card-content">
 
+                            
+                           </div> 
+
+                            <div className="btnn">
+                            <button > 
+                            View Profile
+                            </button>
                             </div>
 
                         </div>
-                        )
+                        
                     </TinderCard>
                 ))}
             </div>
