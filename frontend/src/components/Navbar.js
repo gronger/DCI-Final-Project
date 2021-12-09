@@ -6,7 +6,7 @@ import MyProfile from './MyProfile.jsx';
 
 
 function Navbar() {
-  const isLogged = localStorage.getItem("test");
+  const isLogged = localStorage.getItem("user");
 
   const [loginStatus, setLoginStatus] = useContext(UserContext);
 
@@ -32,7 +32,7 @@ function Navbar() {
                 <>
                   <li class="nav-item">
                     <li class="nav-item">
-                      <Link to="/" className="nav-link active">Home</Link>
+                      <Link to="/main" className="nav-link active">Home</Link>
                     </li>
                     <li class="nav-item">
                       <Link to="/about" className="nav-link active">
