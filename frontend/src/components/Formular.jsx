@@ -6,13 +6,10 @@ import RegisterProForm from './RegisterProForm.jsx';
 import './formular.css'
 
 const Formular = () => {
-  const [fakeUser, setFakeUser] = useState();
-
-  console.log("this comes from fake user", fakeUser);
+  const [file, setFile] = useState(null);
+  const [data, setData] = useState({});
 
   const history = useHistory();
-
-  const [data, setData] = useState({});
 
   const handleInputChange = (event) => {
     console.log(event.target.value);
@@ -25,16 +22,42 @@ const Formular = () => {
   const sendData = async (e) => {
 
     e.preventDefault();
+    console.log(data);
 
-    await axios
-      .post("http://localhost:5000/register", data)
-      .then((response) => console.log(response.data))
+    const formData = new FormData();
+    formData.append("selectedfile", file);
+    formData.append("typeUser", data.typeUser);
+    formData.append("username", data.username);
+    formData.append("password", data.password);
+    formData.append("firstname", data.firstname);
+    formData.append("lastname", data.lastname);
+    formData.append("email", data.email);
+    formData.append("age", data.age);
+    formData.append("activity", data.activity);
+    formData.append("lookingFor", data.lookingFor);
+
+
+    const config = {
+      method: "POST",
+      body: formData
+    };
+
+    fetch("http://localhost:5000/register", config)
+      .then((response) => console.log(response))
       .catch((error) => console.log(error));
-    history.push("/");
+    // history.push("/");
 
-    console.log(data.name + " " + data.lastname + " " + data.Age);
   };
-  // avoid autmatic processing
+
+  function changeFile(e) {
+    setFile(e.target.files[0])
+    console.log(e.target.files);
+  }
+
+  function test() {
+    console.log("test");
+  }
+
   return (
     <div>
       <div className="form">
@@ -54,35 +77,39 @@ const Formular = () => {
       </div>
 
         <div
-                    onChange={handleInputChange}
+          onChange={handleInputChange}
 
         >
           <input
             type="radio"
             id="project-starter"
             name="typeUser"
-            value="pro"
+            value="Pro"
           />
           <label for="project-starter">Project Starter</label>
         </div>
- 
+
       </div>
 
-      {data.typeUser === "talent" && (
-        <RegisterTalentForm 
-            data={data}
-            handleInputChange={handleInputChange}
-            sendData={sendData}
-        />
-      )} 
-      {data.typeUser === "pro" && (
-        <RegisterProForm 
-        data={data}
-        handleInputChange={handleInputChange}
-        sendData={sendData}
+
+      {data.typeUser === "Talent" && (
+        <RegisterTalentForm
+          data={data}
+          handleInputChange={handleInputChange}
+          sendData={sendData}
 
         />
-       
+      )}
+      {data.typeUser === "Pro" && (
+        <RegisterProForm
+          data={data}
+          handleInputChange={handleInputChange}
+          sendData={sendData}
+          file={file}
+          setFile={setFile}
+
+        />
+
       )}
     </div>
   );
