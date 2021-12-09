@@ -139,16 +139,13 @@ export default function MyProfile() {
                     <input disabled={isDisabled} type="text" onChange={handleChange} name="username" value={localdata.username} />
                 </div>
 
-
                 <div className="user-description">Description</div>
                 <div className="user-data-description">
                     <input className="description" type="text" value={localdata.age} />
                 </div>
 
-
                 <br />
                 <button onClick={saveInfos}>save</button>
-
             </div>
 
 
