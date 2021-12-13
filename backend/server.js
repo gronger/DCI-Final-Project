@@ -99,6 +99,15 @@ app.get('/getuser', async (req, res) => {
 
 })
 
+app.get('/users/:id', async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+        return res.json(user)
+    }
+    res.json({ message: "Error finding user" })
+
+})
+
 app.get('/getfile', async (req, res) => {
     const user = await File.find({});
     if (user) {
@@ -107,6 +116,7 @@ app.get('/getfile', async (req, res) => {
     res.json({ message: "Error from getuser" })
 
 })
+
 
 app.get('/img*', (req, res) => {
 
