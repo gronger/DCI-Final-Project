@@ -27,13 +27,17 @@ import {
     }, [])
 
 
-    if(!user) {console.log("loading")}
+    if (!user) return "loading"
 
     return (
         <div>
             <h3>ID: {id}</h3>
             
-            <h4> {user.firstname} </h4>
+            <ul className="userinfo">
+                
+                <li>name:  {user.firstname} {user.lastname} </li>
+                <li>{user.email}</li>
+            </ul>
             {/* <h4> {} </h4> */}
 
             {/* <div className="user-data">
