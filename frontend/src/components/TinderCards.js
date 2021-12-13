@@ -38,8 +38,8 @@ console.log(props.people)
                             <div className="card-info">
                             
                             <Link to={"/User/" + person._id}className="nav-link active">
-                              Profile.
-                             </Link>
+                            Profile.
+                            </Link>
                                 <p>{person.username}</p>
                                 <p>{person.age}</p>
                             </div>
