@@ -11,6 +11,7 @@ import MyProfile from "./MyProfile.jsx";
 import Cards from './Cards.js'
 import About from "./about.jsx";
 import Contact from "./contact.jsx"
+import UserProfile from "./UserProfile.js"
 
 function Navigation() {
   const user = localStorage.getItem("user");
@@ -70,6 +71,10 @@ function Navigation() {
 
               <Route path="/contact">
                 <Contact />
+              </Route>
+
+              <Route path="/User/:id">
+                <UserProfile />
               </Route>
 
 

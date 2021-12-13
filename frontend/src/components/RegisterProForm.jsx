@@ -116,7 +116,7 @@ function RegistrationPro(props) {
               <div>File name:{props.file.name}</div>
               <div>File type:{props.file.type}</div>
               {/* <div>File size:{(file.size / 1024).toFixed(1)kilobytes }</div> */}
-              <div>File modified date:{props.file.lastModifiedDate.toISOString()}</div>
+              {/* <div>File modified date:{props.file.lastModifiedDate.toISOString()}</div> */}
 
               <img src={URL.createObjectURL(props.file)} width="100" />
             </div>
