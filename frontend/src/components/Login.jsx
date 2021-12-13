@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from './contexts/UserContext.js';
 import { useHistory } from 'react-router-dom';
+import bg from '../img/bg.jpeg'
 
 
 export default function Login() {
@@ -40,7 +41,7 @@ export default function Login() {
     return (
         <div className='login'>
             <form onSubmit={loginHandler}>
-                <p>Login here</p>
+                <h1 className="title">Login here</h1>
                 <div className="prueba" >
                 <input type="email" value={login.email} onChange={e => setLogin({ ...login, email: e.target.value })} placeholder="email"></input><br />
                  </div>
