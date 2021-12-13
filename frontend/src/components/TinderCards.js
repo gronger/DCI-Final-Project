@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './TinderCards.css'
 import TinderCard from 'react-tinder-card'
+import Profile from './profile';
+import { Link } from 'react-router-dom';
+
+
 
 
 function TinderCards(props) {
@@ -9,7 +13,7 @@ function TinderCards(props) {
         let url = "http://localhost:5000/img/" + person.path;
         return url
     }
-
+console.log(props.people)
     return (
         <div>
             <div className='tinderCards__cardContainer' >
@@ -32,6 +36,10 @@ function TinderCards(props) {
                             </div>
 
                             <div className="card-info">
+                            
+                            <Link to={"/User/" + person._id}className="nav-link active">
+                              Profile.
+                             </Link>
                                 <p>{person.username}</p>
                                 <p>{person.age}</p>
                             </div>
