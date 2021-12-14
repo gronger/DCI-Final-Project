@@ -51,8 +51,8 @@ export default function Login() {
                 
                 <div class="container">
                     <button className="btn" type="submit">Submit</button>
-                </div>
-                <p>you dont have Account? register<Link to="/formular"> here</Link></p>
+                </div><br/>
+                <h5>you dont have Account? register<Link to="/formular"> here</Link></h5>
             </form>
         </div>
     )
