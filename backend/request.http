@@ -9,7 +9,7 @@ Content-Type: application/json
 }
 
 ###
-GSECRET=lalongET http://localhost:5000/getuser
+GET http://localhost:5000/getuser
 
 ###
 GET http://localhost:5000/getfile
@@ -28,4 +28,30 @@ Content-Type: application/json
 
 {
     "message": "hallo from message"
+}
+
+###
+
+POST http://localhost:5000/newmatch
+Content-Type: application/json
+
+{
+    "matchTarget":       "61a8a0d8930564e8d6837b55",
+    "matchInitiator":    "61a8a1f8930564e8d6837b57"
+}
+
+###
+
+
+GET http://localhost:5000/allmatches
+Content-Type: application/json
+
+
+###
+
+POST http://localhost:5000/allmatchessingleuser
+Content-Type: application/json
+
+{
+    { "user1-ID": "WJ485f", "user2-ID": "KL934b", "isMatch": true }
 }
