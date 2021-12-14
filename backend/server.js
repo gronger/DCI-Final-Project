@@ -6,6 +6,7 @@ import dotenv from "dotenv";
 import multer from 'multer';
 import { File } from './models/file.js';
 import jwt from 'jsonwebtoken';
+import { Match } from './models/match.js';
 
 
 const app = express();
@@ -152,6 +153,30 @@ app.post('/message', (req, res) => {
 //     }
 //     res.json({ message: "Error from api/user" })
 // })
+
+app.post('/newmatch', async (req, res) => {
+
+    const matchInitiator = await User.findById(req.body.matchInitiator);
+    const matchTarget = await User.findById(req.body.matchTarget);
+
+    Match.match(req, res);
+})
+
+app.get('/allmatches', async (req, res) => {
+
+    const allMatches = await Match.find({});
+    res.json(allMatches);
+
+    await Match.deleteMany({  });
+})
+
+// app.post('/allmatchessingleuser', (req, res) => {
+//     if (req.body) {
+//         return res.status(200).json(req.body)
+//     }
+//     res.json({ message: "Error from all matches single user" })
+// })
+
 
 app.put('/save', checkTokenMiddleware, async (req, res) => {
     //console.log(req);
