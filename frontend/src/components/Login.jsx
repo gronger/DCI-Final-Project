@@ -50,9 +50,9 @@ export default function Login() {
                 <input className="flabel" type="password" value={login.password} onChange={e => setLogin({ ...login, password: e.target.value })} placeholder="password"></input><br /><br />
                 
                 <div class="container">
-                    <a href="#" type="submit" class="btn">Submit</a>
-                </div><br/>
-                <h5>you dont have Account? register<Link to="/formular"> here</Link></h5>
+                    <button className="btn" type="submit">Submit</button>
+                </div>
+                <p>you dont have Account? register<Link to="/formular"> here</Link></p>
             </form>
         </div>
     )
