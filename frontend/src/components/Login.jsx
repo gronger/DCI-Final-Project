@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { UserContext } from './contexts/UserContext.js';
 import { useHistory } from 'react-router-dom';
-import bg from '../img/bg.jpeg'
+import bg from '../img/bg.jpeg';
+import 'animate.css';
 
 
 export default function Login() {
@@ -41,13 +42,17 @@ export default function Login() {
     return (
         <div className='login'>
             <form onSubmit={loginHandler}>
-                <h1 className="title">Login here</h1>
+                <h1 class="animate__animated animate__backInDown">Login here</h1>
+
                 <div className="prueba" >
-                <input type="email" value={login.email} onChange={e => setLogin({ ...login, email: e.target.value })} placeholder="email"></input><br />
-                 </div>
-                <input type="password" value={login.password} onChange={e => setLogin({ ...login, password: e.target.value })} placeholder="password"></input><br /><br />
-                <button type="submit">Submit</button>
-                <h3>you dont have Account? register<Link to="/formular"> here</Link></h3>
+                <input className="flabel" type="email" value={login.email} onChange={e => setLogin({ ...login, email: e.target.value })} placeholder="email"></input><br />
+                </div>
+                <input className="flabel" type="password" value={login.password} onChange={e => setLogin({ ...login, password: e.target.value })} placeholder="password"></input><br /><br />
+                
+                <div class="container">
+                    <a href="#" type="submit" class="btn">Submit</a>
+                </div><br/>
+                <h5>you dont have Account? register<Link to="/formular"> here</Link></h5>
             </form>
         </div>
     )
