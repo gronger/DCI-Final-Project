@@ -188,7 +188,7 @@ app.put('/save', checkTokenMiddleware, async (req, res) => {
             if (!userFound) {
                 return res.status(404);
             }
-            console.log(userFound);
+            console.log(req.body);
             const x = await User.updateOne({ _id: req.userData._id }, req.body)
             console.log(x);
             return res.status(200).json(userFound);
