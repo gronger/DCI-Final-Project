@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import axios from "axios";
 import { useHistory } from "react-router-dom";
 import RegisterTalentForm from './RegisterTalentForm.jsx';
 import RegisterProForm from './RegisterProForm.jsx';
-import './formular.css'
+import './Formular.css'
 
 const Formular = () => {
   const [file, setFile] = useState(null);
@@ -50,18 +49,13 @@ const Formular = () => {
 
   };
 
-  function changeFile(e) {
-    setFile(e.target.files[0])
-    console.log(e.target.files);
-  }
-
   return (
-    <div>
+    <div className="animate__animated animate__backInRight">
       <div className="form">
         <label>What kind of account would you like to create?</label>
 
         <div
-          onChange={handleInputChange}
+          onChange={handleInputChange} className="radio"
         >
           <input
             type="radio"
@@ -73,7 +67,7 @@ const Formular = () => {
         </div>
 
         <div
-          onChange={handleInputChange}
+          onChange={handleInputChange} className="radio"
 
         >
           <input
@@ -86,7 +80,6 @@ const Formular = () => {
         </div>
 
       </div>
-
 
       {data.typeUser === "Talent" && (
         <RegisterTalentForm

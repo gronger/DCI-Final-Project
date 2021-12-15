@@ -1,0 +1,25 @@
+.proform{
+
+    display: block;
+margin-left: auto;
+margin-right: auto;
+width: 33%;
+    }
+    
+    .labels{
+        margin-bottom:6px;
+    }
+
+    .btnproform {
+        background-color: tomato;
+        margin-left: 12vw;
+        width: 55px;
+        height: 55px;
+    }
+
+#btnsend{
+        margin-left: 9vw;
+    }
+    
+    
+    

@@ -1,13 +1,11 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import { Modal, Button } from "react-bootstrap";
 import "./UserProfile.css";
 import axios from "axios";
 
 import {
   BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
   useParams,
 } from "react-router-dom";
 
@@ -15,6 +13,13 @@ function UserProfile() {
   let { id } = useParams();
   const [user, setUser] = useState(null);
   //   const [localdata, setLocaldata] = useState(null);
+
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [isMutual, setIsMutual] = useState(null);
+
 
   useEffect(() => {
     axios
@@ -27,28 +32,18 @@ function UserProfile() {
 
   if (!user) return "loading";
 
-  // const [match, setMatch] = useState({
+  //   const [match, setMatch] = useState({
   //     matchTarget: "",
-  //     matchInitiator: ""
-  // });
+  //     matchInitiator: "",
+  //   });
 
   function setMatch() {
-    // reminder of backend
-
-    //         POST http://localhost:5000/newmatch
-    //         Content-Type: application/json
-
-    // {
-
-    // }
-// 2 browsrers to test// save isMutual into useState 
-
     const data = localStorage.getItem("user");
     const currentUser = JSON.parse(data);
 
     let payload = {
       matchTarget: id,
-      matchInitiator: currentUser
+      matchInitiator: currentUser,
     };
 
     console.log(payload);
@@ -57,13 +52,8 @@ function UserProfile() {
       .post("http://localhost:5000/newmatch", payload)
       .then((response) => {
         if (response.status === 200) {
-          console.log(response.data);
-          if (response.data.isMutual) {
-              alert("Mutual." + user.email );
-
-          } else {
-              alert("not mutual");
-          }
+            setIsMutual(response.data.isMutual);
+            handleShow();
         }
       })
       .catch((error) => console.log(error));
@@ -72,6 +62,17 @@ function UserProfile() {
   return (
     <div>
       <h3>ID: {id}</h3>
+
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Body>
+            {isMutual ? "It's a match! Get in touch with " + user.firstname + " " + user.lastname + " at " + user.email : "If " + user.firstname + " " + user.lastname + " matches with you too, we'll let you know!"}
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
 
       <ul className="userinfo">
         <li>
@@ -82,15 +83,7 @@ function UserProfile() {
             Would you like to work with this user?
           </button>
         </li>
-
-        {/* <li>{user.email}</li> */}
       </ul>
-      {/* <h4> {} </h4> */}
-
-      {/* <div className="user-data">
-                <div className="user-data-label">ID</div>
-                <div disabled className="user-data-value">{localdata._id}</div>
-            </div> */}
     </div>
   );
 }

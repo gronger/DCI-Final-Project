@@ -1,18 +1,14 @@
-import React, { useState, useContext } from "react";
+import React, { useState } from "react";
 import './login.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import { UserContext } from './contexts/UserContext.js';
 import { useHistory } from 'react-router-dom';
-import bg from '../img/bg.jpeg';
 import 'animate.css';
 
 
 export default function Login() {
 
     const history = useHistory();
-
-    const [loginStatus, setLoginStatus] = useContext(UserContext);
 
     const [login, setLogin] = useState({
         email: "",

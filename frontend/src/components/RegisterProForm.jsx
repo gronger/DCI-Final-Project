@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import './RegisterProForm.css';
+
 
 
 
@@ -6,7 +8,6 @@ function RegistrationPro(props) {
 
 
   const handleInputChange = props.handleInputChange;
-  const data = props.data;
 
 
   const sendData = props.sendData;
@@ -20,8 +21,8 @@ function RegistrationPro(props) {
     <div id="project-starter-registration" class=" p-5 ">
       <h1 className="mt-5 mb-5"></h1>
 
-      <form className="border  p-5 row p-6" onSubmit={sendData}>
-        <div className="col-md-3">
+      <form className="proform" onSubmit={sendData}>
+        <div className="labels">
           <input
             required
             placeholder="Name"
@@ -32,7 +33,7 @@ function RegistrationPro(props) {
           ></input>
         </div>
 
-        <div className="col-md-3">
+        <div className="labels">
           <input
             required
             placeholder="lastname"
@@ -107,9 +108,11 @@ function RegistrationPro(props) {
             name="lookingFor"
             onChange={handleInputChange}
           ></input>
+          <br/>
+          
 
 
-          <input type="file" name="selectedfile" onChange={changeFile} />
+          <input className="btn btn-outline-secondary" type="file" name="selectedfile" onChange={changeFile} />
           {/* <button onClick={saveFile}>saveFile</button> */}
           {props.file && (
             <div>
@@ -118,20 +121,16 @@ function RegistrationPro(props) {
               {/* <div>File size:{(file.size / 1024).toFixed(1)kilobytes }</div> */}
               {/* <div>File modified date:{props.file.lastModifiedDate.toISOString()}</div> */}
 
-              <img src={URL.createObjectURL(props.file)} width="100" />
+              <img alt="image of..:" src={URL.createObjectURL(props.file)} width="100" />
             </div>
           )}
 
         </div>
-        <button className="btn btn-primary" type="submit">
-          Send
+        <br/>
+        <button className="btn btn-outline-warning" style={{fontSize:"22px"}} type="submit" id="btnsend"><b>send</b>
         </button>
       </form>
 
-      <h3 className="ml-5  mb-5 mt-5 ">
-        {data.name} - {data.lastname} -{data.Age} - {data.activity} -
-        {data.lookingFor}{" "}
-      </h3>
     </div>
   )
 }

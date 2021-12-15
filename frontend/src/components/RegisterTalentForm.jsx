@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import './RegisterTalentForm.css';
+
+
 function TalentPro(props) {
 
     const handleInputChange = props.handleInputChange;
@@ -15,10 +18,9 @@ function TalentPro(props) {
     <div  id="talent-registration" class=" p-5 ">
       <h1 className="mt-5 mb-5"></h1>
 
-      <form className="border  p-5 row p-6" onSubmit={sendData}>
-        <div  className="col-md-3">
-         <div className="prueba">
-          <input 
+      <form className="talentform" onSubmit={sendData}>
+        <div className="labels" >
+          <input
             required
             placeholder="Name"
             className="form-control"
@@ -26,11 +28,8 @@ function TalentPro(props) {
             name="firstname"
             onChange={handleInputChange}
           ></input>
-          </div>
-
         </div>
-
-        <div className="col-md-3">
+        <div >
           <input
             required
             placeholder="lastname"
@@ -105,17 +104,18 @@ function TalentPro(props) {
             name="weight"
             onChange={handleInputChange}
           ></input>
+          <br/>
 
           <input
-            className="btn btn-danger mb-5 mt-5 "
+            className="btn btn-outline-secondary"
             onChange={changeFile}
             type="file"
             id="myFile"
             name="selectedfile"
           />
         </div>
-        <button className="btn btn-primary" type="submit">
-          Send
+        <br/>
+        <button className="btn btn-outline-warning" style={{fontSize:"22px"}} type="submit" id="btnsend"><b>send</b>
         </button>
       </form>
 

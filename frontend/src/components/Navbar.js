@@ -1,14 +1,10 @@
-import React, { useState, useContext } from "react";
-import { UserContext } from "./contexts/UserContext.js";
+import React from "react";
 import Logout from './Logout.jsx'
-import { Link } from 'react-router-dom'
-import MyProfile from './MyProfile.jsx';
+import { Link } from 'react-router-dom';
 import "./Navbar.css";
 
 function Navbar() {
   const isLogged = localStorage.getItem("user");
-
-  const [loginStatus, setLoginStatus] = useContext(UserContext);
 
   return (
     <div class=" mb-5">
