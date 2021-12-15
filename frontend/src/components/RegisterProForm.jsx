@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import './RegisterProForm.css';
+
 
 
 
@@ -20,8 +22,8 @@ function RegistrationPro(props) {
     <div id="project-starter-registration" class=" p-5 ">
       <h1 className="mt-5 mb-5"></h1>
 
-      <form className="border  p-5 row p-6" onSubmit={sendData}>
-        <div className="col-md-3">
+      <form className="proform" onSubmit={sendData}>
+        <div className="labels">
           <input
             required
             placeholder="Name"
@@ -32,7 +34,7 @@ function RegistrationPro(props) {
           ></input>
         </div>
 
-        <div className="col-md-3">
+        <div className="labels">
           <input
             required
             placeholder="lastname"
@@ -107,9 +109,11 @@ function RegistrationPro(props) {
             name="lookingFor"
             onChange={handleInputChange}
           ></input>
+          <br/>
+          
 
 
-          <input type="file" name="selectedfile" onChange={changeFile} />
+          <input className="btn btn-outline-secondary" type="file" name="selectedfile" onChange={changeFile} />
           {/* <button onClick={saveFile}>saveFile</button> */}
           {props.file && (
             <div>
@@ -123,15 +127,11 @@ function RegistrationPro(props) {
           )}
 
         </div>
-        <button className="btn btn-primary" type="submit">
-          Send
+        <br/>
+        <button className="btn btn-outline-warning" style={{fontSize:"22px"}} type="submit" id="btnsend"><b>send</b>
         </button>
       </form>
 
-      <h3 className="ml-5  mb-5 mt-5 ">
-        {data.name} - {data.lastname} -{data.Age} - {data.activity} -
-        {data.lookingFor}{" "}
-      </h3>
     </div>
   )
 }

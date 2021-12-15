@@ -1,0 +1,21 @@
+.talentform{
+
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 33%;
+
+}
+
+.labels{
+    margin-bottom:6px;
+}
+
+.form-control{
+    background-color: transparent;
+}
+
+#btnsend{
+    margin-left: 9vw;
+}
+
