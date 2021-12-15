@@ -37,13 +37,13 @@ function UserProfile() {
                 
                 <li>name:  {user.firstname} {user.lastname} </li>
                 <li>{user.email}</li>
-            </ul>
-            {/* <h4> {} </h4> */}
+                <li>{user.age}</li>
+                <li>{user.weight}</li>
+                <li>{user.height}</li>
 
-            {/* <div className="user-data">
-                <div className="user-data-label">ID</div>
-                <div disabled className="user-data-value">{localdata._id}</div>
-            </div> */}
+
+
+            </ul>
 
 
         </div>
