@@ -20,10 +20,10 @@ export default function Login() {
     })
 
 
-    async function loginHandler(e) {
+    function loginHandler(e) {
 
         e.preventDefault();
-        await axios.post('http://localhost:5000/login', login)
+        axios.post('http://localhost:5000/login', login)
             .then(response => {
                 if (response.status === 200) {
             console.log(response.data);
