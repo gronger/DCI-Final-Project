@@ -31,15 +31,16 @@ function UserProfile() {
 
     return (
         <div>
-            <h3>ID: {id}</h3>
+            <h3 className="id-decoration">ID: {id}</h3>
             
             <ul className="userinfo">
                 
-                <li>name:  {user.firstname} {user.lastname} </li>
+                <li className=''>name:  {user.firstname} {user.lastname} </li>
                 <li>{user.email}</li>
-                <li>{user.age}</li>
-                <li>{user.weight}</li>
-                <li>{user.height}</li>
+                <li>{user.age} years old </li>
+                <li>{user.weight} Kg.</li>
+                <li>{user.height} Cm.</li>
+                <li>{user.description}</li> 
 
 
 

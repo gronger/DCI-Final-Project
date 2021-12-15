@@ -8,7 +8,7 @@ export default function MyProfile() {
 
     const [localdata, setLocaldata] = useState(null);
     const [file, setFile] = useState(null);
-    const [isDisabled, setIsDisabled] = useState(false);
+    const [isDisabled, setIsDisabled] = useState(true);
 
     const editProfile = (e) => {
         setIsDisabled(!isDisabled)
@@ -75,6 +75,12 @@ export default function MyProfile() {
                     alert("unauthor")
                     return
                 }
+
+                if (res.status === 200) {
+                    alert("succes")
+                    return
+                }
+
                 return res.json()
             })
             .then(res => console.log(res))
@@ -123,7 +129,7 @@ export default function MyProfile() {
 
                 <div className="user-username">User name</div>
                 <div className="user-data-value">
-                    <input type="text" value={localdata.lastname} />
+                    <input type="text" disabled={isDisabled} onChange={handleChange} name='username' value={localdata.username} />
                 </div>
 
                 <div className="user-age">Age</div>
@@ -131,14 +137,10 @@ export default function MyProfile() {
                     <input disabled={isDisabled} type="text" onChange={handleChange} name="age" value={localdata.age} />
                 </div>
 
-                <div className="user-age">username</div>
-                <div className="user-data-value">
-                    <input disabled={isDisabled} type="text" onChange={handleChange} name="username" value={localdata.username} />
-                </div>
 
                 <div className="user-description">Description</div>
                 <div className="user-data-description">
-                    <input className="description" type="text" value={localdata.age} />
+                    <input  type="text" disabled={isDisabled} onChange={handleChange} name='description' value={localdata.description ? localdata.description : ''} />
                 </div>
 
                 <br />
