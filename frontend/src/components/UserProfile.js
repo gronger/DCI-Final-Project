@@ -9,11 +9,11 @@ import {
     Route,
     Link,
     useParams
-  } from "react-router-dom";
-  
-  function UserProfile() { 
-      let { id } = useParams();
-      const [user, setUser] = useState(null)
+} from "react-router-dom";
+
+function UserProfile() { 
+    let { id } = useParams();
+    const [user, setUser] = useState(null)
         //   const [localdata, setLocaldata] = useState(null);
         
 
@@ -21,7 +21,7 @@ import {
     useEffect(() => {
         axios.get("http://localhost:5000/users/" +id )
             .then(result => {
-              setUser (result.data);
+            setUser (result.data);
             })
             .catch(err => console.log(err))
     }, [])

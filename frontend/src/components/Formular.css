@@ -1,0 +1,31 @@
+
+
+
+.form{
+    border: rgb(214, 188, 42) 1 px solid;
+    margin-left: 585px;
+    text-align: 0;
+    color: rgb(237, 230, 225);
+    font-weight: bolder;
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.radio{
+    margin-right: 0;
+}
+
+.radio input{
+    margin-right: 10px;
+    transform: scale(1.5);
+}
+
+
+label{
+    text-align: center;
+}
+
+.animate__animated .animate__backInRight{
+    --animate-duration: 11s;
+}
