@@ -105,6 +105,28 @@ function TalentPro(props) {
           ></input>
           <br/>
 
+          <div className="col-md-3" class="mt-2">
+          <input
+            required
+            placeholder="What do you do? Model, Actor, etc"
+            className="form-control"
+            type="text"
+            name="activity"
+            onChange={handleInputChange}
+          ></input>
+        </div>
+
+        <div className="col-md-3 " class="mt-2">
+          <input
+            required
+            placeholder="Who are you looking for? Photographers, Film Directors, etc"
+            className="form-control"
+            type="text"
+            name="lookingFor"
+            onChange={handleInputChange}
+          ></input>
+          <br/>
+
           <input
             className="btn btn-outline-secondary"
             onChange={changeFile}
