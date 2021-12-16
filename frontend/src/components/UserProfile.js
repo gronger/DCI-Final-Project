@@ -72,7 +72,9 @@ function UserProfile() {
         <li className="">
           name: {user.firstname} {user.lastname}{" "}
         </li>
-        <li>{user.email}</li>
+        <li>{user.typeUser}</li>
+        <li>{user.activity}</li>
+        <li>{user.lookingFor}</li>
         <li>{user.age} years old </li>
         <li>{user.weight} Kg.</li>
         <li>{user.height} Cm.</li>
