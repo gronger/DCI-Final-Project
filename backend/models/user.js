@@ -64,6 +64,7 @@ UserSchema.statics.register = async (userData) => {
 };
 
 UserSchema.statics.login = async (userData) => {
+  console.log(userData);
   //
   const user = await User.findOne({ email: userData.email });
   if (!user) {
