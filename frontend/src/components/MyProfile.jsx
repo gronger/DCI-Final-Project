@@ -33,25 +33,25 @@ export default function MyProfile() {
     }
 
 
-    function saveFile() {
-        if (!file) {
-            return alert("select file plzz")
-        }
-        const formData = new FormData();
-        formData.append("selectedfile", file);
-        formData.append("test", "this is test");
-        formData.append("test2", { foo: "bar" });
+    // function saveFile() {
+    //     if (!file) {
+    //         return alert("select file plzz")
+    //     }
+    //     const formData = new FormData();
+    //     formData.append("selectedfile", file);
+    //     formData.append("test", "this is test");
+    //     formData.append("test2", { foo: "bar" });
 
-        const config = {
-            method: "POST",
-            body: formData
-        };
+    //     const config = {
+    //         method: "POST",
+    //         body: formData
+    //     };
 
-        fetch("http://localhost:5000/file", config)
-            .then(res => res.json())
-            .then(console.log())
-            .catch(error => console.log(error))
-    }
+    //     fetch("http://localhost:5000/file", config)
+    //         .then(res => res.json())
+    //         .then(console.log())
+    //         .catch(error => console.log(error))
+    // }
 
 
     function saveInfos() {
@@ -71,12 +71,12 @@ export default function MyProfile() {
             .then(res => {
                 console.log(res);
                 if (res.status === 401) {
-                    alert("unauthor")
+                    alert("Unauthorised")
                     return
                 }
 
                 if (res.status === 200) {
-                    alert("succes")
+                    alert("Your profile has been updated!")
                     return
                 }
 
