@@ -1,14 +1,12 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Logout from "./Logout.jsx";
 import Register from "./Register.jsx";
 import Navbar from "./Navbar.js";
 import Login from "./Login";
 import Formular from "./Formular.jsx";
 import Main from "./Main.jsx";
 import MyProfile from "./MyProfile.jsx";
-import Cards from './Cards.js'
 import About from "./about.jsx";
 import Contact from "./contact.jsx"
 import UserProfile from "./UserProfile.js"

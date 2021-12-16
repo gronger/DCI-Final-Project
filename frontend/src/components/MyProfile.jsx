@@ -103,7 +103,7 @@ export default function MyProfile() {
                         {/* <div>File size:{(file.size / 1024).toFixed(1)kilobytes }</div> */}
                         <div>File modified date:{file.lastModifiedDate.toISOString()}</div>
 
-                        <img src={URL.createObjectURL(file)} width="100" />
+                        <img alt="" src={URL.createObjectURL(file)} width="100" />
                     </div>
                 )}
 
