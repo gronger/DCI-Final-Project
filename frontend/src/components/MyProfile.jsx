@@ -103,11 +103,12 @@ export default function MyProfile() {
                         {/* <div>File size:{(file.size / 1024).toFixed(1)kilobytes }</div> */}
                         <div>File modified date:{file.lastModifiedDate.toISOString()}</div>
 
-                        <img alt="" src={URL.createObjectURL(file)} width="100" />
+                        <img className="profileimg" src={URL.createObjectURL(file)} />
+
                     </div>
                 )}
 
-                <h1><img width="50" src={profilepic} />my profile</h1>
+                <h1><img className="profileimg" src={profilepic} />my profile</h1>
                 <button onClick={editProfile}>Edit my profile</button>
             </div>
 
