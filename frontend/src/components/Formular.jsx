@@ -49,11 +49,6 @@ const Formular = () => {
 
   };
 
-  function changeFile(e) {
-    setFile(e.target.files[0])
-    console.log(e.target.files);
-  }
-
   return (
     <div className="animate__animated animate__backInRight">
       <div className="form">

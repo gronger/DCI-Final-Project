@@ -1,9 +1,7 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import Cards from './Cards';
 import './Cards.css'
 import TinderCards from './TinderCards.js';
-import TinderCard from 'react-tinder-card';
 
 export default function Main() {
 
