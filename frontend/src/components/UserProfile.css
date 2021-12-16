@@ -1,5 +1,12 @@
+
+.list{
+    text-decoration: none;
+}
 .userinfo{
-    color: rgb(83, 165, 42);
+    margin-top: 50px;
+    list-style: none;
+    text-align: center;
+    color: rgb(220, 230, 216);
     font-size: 22px;
-    border: 5px red solid;
+    border: 1px red solid;
 }

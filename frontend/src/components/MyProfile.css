@@ -12,11 +12,13 @@ h1{
 .user-data-label{
     width: 300px;
 }
-.user-data-value{}
-
-
 
 .description{
- 
     height: 100px;
 }
+
+.profileimg{
+    width: 20%;
+}
+
+

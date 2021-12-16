@@ -8,7 +8,7 @@ export default function MyProfile() {
 
     const [localdata, setLocaldata] = useState(null);
     const [file, setFile] = useState(null);
-    const [isDisabled, setIsDisabled] = useState(false);
+    const [isDisabled, setIsDisabled] = useState(true);
 
     const editProfile = (e) => {
         setIsDisabled(!isDisabled)
@@ -75,6 +75,12 @@ export default function MyProfile() {
                     alert("unauthor")
                     return
                 }
+
+                if (res.status === 200) {
+                    alert("succes")
+                    return
+                }
+
                 return res.json()
             })
             .then(res => console.log(res))
@@ -98,11 +104,12 @@ export default function MyProfile() {
                         {/* <div>File size:{(file.size / 1024).toFixed(1)kilobytes }</div> */}
                         <div>File modified date:{file.lastModifiedDate.toISOString()}</div>
 
-                        <img src={URL.createObjectURL(file)} width="100" />
+                        <img className="profileimg" src={URL.createObjectURL(file)} />
+
                     </div>
                 )}
 
-                <h1><img width="50" src={profilepic} />my profile</h1>
+                <h1><img className="profileimg" src={profilepic} />my profile</h1>
                 <button onClick={editProfile}>Edit my profile</button>
             </div>
 
@@ -123,7 +130,7 @@ export default function MyProfile() {
 
                 <div className="user-username">User name</div>
                 <div className="user-data-value">
-                    <input type="text" value={localdata.lastname} />
+                    <input type="text" disabled={isDisabled} onChange={handleChange} name='username' value={localdata.username} />
                 </div>
 
                 <div className="user-age">Age</div>
@@ -131,14 +138,10 @@ export default function MyProfile() {
                     <input disabled={isDisabled} type="text" onChange={handleChange} name="age" value={localdata.age} />
                 </div>
 
-                <div className="user-age">username</div>
-                <div className="user-data-value">
-                    <input disabled={isDisabled} type="text" onChange={handleChange} name="username" value={localdata.username} />
-                </div>
 
                 <div className="user-description">Description</div>
                 <div className="user-data-description">
-                    <input className="description" type="text" value={localdata.age} />
+                    <input  type="text" disabled={isDisabled} onChange={handleChange} name='description' value={localdata.description ? localdata.description : ''} />
                 </div>
 
                 <br />
@@ -149,5 +152,3 @@ export default function MyProfile() {
         </div>
     )
 }
-
-
