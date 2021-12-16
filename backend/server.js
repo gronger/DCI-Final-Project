@@ -59,14 +59,10 @@ app.post("/file", uploadCheck, async (req, res) => {
 
 
 app.post('/register', uploadCheck, async (req, res) => {
-    console.log(req.files);
-    console.log(req.body);
-    console.log(1111111);
-    console.log(req.files.selectedfile[0].originalname);
-    console.log(req.files.selectedfile[0].path);
-
-    req.body.originalname = req.files.selectedfile[0].originalname;
-    req.body.path = req.files.selectedfile[0].path;
+    if (req.files) {
+        req.body.originalname = req.files.selectedfile[0].originalname;
+        req.body.path = req.files.selectedfile[0].path;
+    }
 
 
     if (req.body) {
@@ -83,6 +79,7 @@ app.post('/register', uploadCheck, async (req, res) => {
 
 app.post('/login', async (req, res) => {
     const user = await User.login(req.body);
+    console.log(user);
     if (user) {
         const token = jwt.sign({ _id: user._id }, process.env.SECRET);
         return res.json({ user, token });
