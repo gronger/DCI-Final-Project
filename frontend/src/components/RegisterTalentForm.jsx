@@ -95,6 +95,8 @@ function TalentPro(props) {
         </div>
 
         <div className="col-md-3 " class="mt-2">
+          
+          
           <input
             required
             placeholder="Kg."
@@ -103,7 +105,52 @@ function TalentPro(props) {
             name="weight"
             onChange={handleInputChange}
           ></input>
-          <br/>
+         <br/>
+         </div>
+{/* 
+          <div className="col-md-3" class="mt-2">
+          <input
+            required
+            placeholder="What do you do? Model, Actor, etc"
+            className="form-control"
+            type="text"
+            name="activity"
+            onChange={handleInputChange}
+          ></input>
+        </div> */}
+
+        <div className="col-md-3 " class="mt-2">
+        <label for="activity">What do you do?:</label>
+
+          <select required name="activity" id="activity">
+            <option value="model">Model</option>
+            <option value="actor">Actor</option>
+            <option value="dancer">Dancer</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div className="col-md-3 " class="mt-2">
+          <label for="lookingFor">What are you looking for?:</label>
+
+          <select required name="lookingFor" id="lookingFor">
+            <option value="photographer">Photographer</option>
+            <option value="film-director">Film Director</option>
+            <option value="fashion-designer">Fashion Designer</option>
+            <option value="choreographer">Choreographer</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+          {/* <input
+            required
+            placeholder="Who are you looking for? Photographers, Film Directors, etc"
+            className="form-control"
+            type="text"
+            name="lookingFor"
+            onChange={handleInputChange}
+          ></input>
+          <br/> */}
 
           <input
             className="btn btn-outline-secondary"
@@ -112,7 +159,6 @@ function TalentPro(props) {
             id="myFile"
             name="selectedfile"
           />
-        </div>
         <br/>
         <button className="btn btn-outline-warning" style={{fontSize:"22px"}} type="submit" id="btnsend"><b>send</b>
         </button>
