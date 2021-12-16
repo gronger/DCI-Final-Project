@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './RegisterProForm.css';
 
 
@@ -8,7 +8,6 @@ function RegistrationPro(props) {
 
 
   const handleInputChange = props.handleInputChange;
-  const data = props.data;
 
 
   const sendData = props.sendData;
@@ -122,7 +121,7 @@ function RegistrationPro(props) {
               {/* <div>File size:{(file.size / 1024).toFixed(1)kilobytes }</div> */}
               {/* <div>File modified date:{props.file.lastModifiedDate.toISOString()}</div> */}
 
-              <img src={URL.createObjectURL(props.file)} width="100" />
+              <img alt="image of..:" src={URL.createObjectURL(props.file)} width="100" />
             </div>
           )}
 

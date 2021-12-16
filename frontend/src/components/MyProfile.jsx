@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import './MyProfile.css';
 import profilepic from '../img/profil.png';
 
@@ -20,8 +19,8 @@ export default function MyProfile() {
         })
         console.log(e.target.value);
     }
-
-    useEffect(async () => {
+//was using async below
+    useEffect(() => {
         const data = localStorage.getItem("user");
         setLocaldata(JSON.parse(data))
         console.log(localdata);
