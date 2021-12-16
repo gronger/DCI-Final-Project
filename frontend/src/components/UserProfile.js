@@ -48,16 +48,25 @@ function UserProfile() {
 
     console.log(payload);
 
+    // axios
+    //   .post("http://localhost:5000/newmatch", payload)
+    //   .then((response) => {
+    //     if (response.status === 200) {
+
+    //     }
+    //   .catch((error) => console.log(error));
+    // });
+
     axios
-      .post("http://localhost:5000/newmatch", payload)
-      .then((response) => {
-        if (response.status === 200) {
-            setIsMutual(response.data.isMutual);
-            handleShow();
-        }
-      })
-      .catch((error) => console.log(error));
-  }
+    .post("http://localhost:5000/newmatch", payload)
+    .then((response) => {
+      if (response.status === 200) {
+          setIsMutual(response.data.isMutual);
+          handleShow();
+      }
+    })
+    .catch((error) => console.log(error));
+}
 
   return (
     <div>
@@ -87,5 +96,6 @@ function UserProfile() {
     </div>
   );
 }
+
 
 export default UserProfile;

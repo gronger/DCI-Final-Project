@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import './RegisterTalentForm.css';
 
 
 function TalentPro(props) {
 
     const handleInputChange = props.handleInputChange;
-    const data = props.data;
     const sendData = props.sendData;
 
     function changeFile(e) {
