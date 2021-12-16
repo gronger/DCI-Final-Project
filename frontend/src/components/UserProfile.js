@@ -4,10 +4,7 @@ import { Modal, Button } from "react-bootstrap";
 import "./UserProfile.css";
 import axios from "axios";
 
-import {
-  BrowserRouter as Router,
-  useParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, useParams } from "react-router-dom";
 
 function UserProfile() {
   let { id } = useParams();
@@ -19,7 +16,6 @@ function UserProfile() {
   const handleShow = () => setShow(true);
 
   const [isMutual, setIsMutual] = useState(null);
-
 
   useEffect(() => {
     axios
@@ -58,23 +54,45 @@ function UserProfile() {
     // });
 
     axios
-    .post("http://localhost:5000/newmatch", payload)
-    .then((response) => {
-      if (response.status === 200) {
+      .post("http://localhost:5000/newmatch", payload)
+      .then((response) => {
+        if (response.status === 200) {
           setIsMutual(response.data.isMutual);
           handleShow();
-      }
-    })
-    .catch((error) => console.log(error));
-}
+        }
+      })
+      .catch((error) => console.log(error));
+  }
 
   return (
     <div>
       <h3>ID: {id}</h3>
 
+      <ul className="userinfo">
+        <li className="">
+          name: {user.firstname} {user.lastname}{" "}
+        </li>
+        <li>{user.email}</li>
+        <li>{user.age} years old </li>
+        <li>{user.weight} Kg.</li>
+        <li>{user.height} Cm.</li>
+        <li>{user.description}</li>
+      </ul>
+
       <Modal show={show} onHide={handleClose}>
         <Modal.Body>
-            {isMutual ? "It's a match! Get in touch with " + user.firstname + " " + user.lastname + " at " + user.email : "If " + user.firstname + " " + user.lastname + " matches with you too, we'll let you know!"}
+          {isMutual
+            ? "It's a match! Get in touch with " +
+              user.firstname +
+              " " +
+              user.lastname +
+              " at " +
+              user.email
+            : "If " +
+              user.firstname +
+              " " +
+              user.lastname +
+              " matches with you too, we'll let you know!"}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
@@ -96,6 +114,5 @@ function UserProfile() {
     </div>
   );
 }
-
 
 export default UserProfile;
