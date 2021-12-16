@@ -29,7 +29,7 @@ console.log(props.people)
                                 <h3 className={person.typeUser === "Pro" ? "pro" : "talent"}>{person.firstname} {person.lastname}</h3>
                             </div>
                             <div className="card-img">
-                                <img src={getProfileImg(person)} />
+                                <img alt="profile-image" src={getProfileImg(person)} />
                             </div>
 
                             <div className="card-info">
