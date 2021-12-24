@@ -7,8 +7,8 @@ function Navbar() {
   const isLogged = localStorage.getItem("user");
 
   return (
-    <div class=" mb-5">
-      <nav className="navbar">
+    <div className="navbar2" class=" mb-5">
+      <nav className="navbar" class="text-center">
 
         <ul >
           {isLogged ?
@@ -23,7 +23,7 @@ function Navbar() {
                 </li>
                 <li class="nav-item">
                   <Link to="/contact">
-                    contact
+                    Contact
                   </Link>
                 </li>
                 <li class="nav-item">
@@ -47,7 +47,7 @@ function Navbar() {
                 </li>
                 <li class="nav-item">
                   <Link to="/contact">
-                    contact
+                    Contact
                   </Link>
                 </li>
             </>
