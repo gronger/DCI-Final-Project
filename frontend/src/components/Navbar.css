@@ -2,9 +2,14 @@
     color: blanchedalmond;
     display: inline-block;
     padding: 10px 20px;
+    text-align: center;
 
 }
 
-
+.nav-item{
+    color: azure;
+    text-align: justify;
+    margin-top: 35px;
+}
 
 

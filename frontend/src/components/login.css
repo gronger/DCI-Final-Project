@@ -35,6 +35,7 @@ h1{
     background: linear-gradient(145deg, #e28017, #a39cd8);
     box-shadow:  6px 6px 21px #607ae6,
                 -6px -6px 21px #38373d;
+                
 }
 
 
@@ -67,9 +68,12 @@ h1{
 }
 
 a{
-    color: rgb(33, 31, 31);
+    color: rgb(255, 255, 255);
     font-family: 'Playfair Display', serif;
     text-decoration: none;
+    font-size: x-large;
+    text-align: center;    
+
 }
 
 
@@ -107,3 +111,8 @@ a{
 .btn:hover:before {
     left: 100%;
 }
+
+#here{
+        font-size: x-large;
+}
+

@@ -18,4 +18,22 @@ width: 33%;
 #btnsend{
     margin-left: 9vw;
 }
-
+.talentform{display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 33%;}label {
+        margin: 0px 0px;
+        color: rgba(237, 230, 225, 0.685);
+        padding: 0px;
+        /* border: 1px solid grey; */
+    }.labels{
+        margin-bottom:6px;
+    }.form-control{
+        background-color: transparent;
+    }#btnsend{
+        margin-left: 9vw;
+        margin-top: 30px;
+    }
+    
+    
+    
