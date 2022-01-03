@@ -56,8 +56,7 @@ export default function Login() {
                 </div><br />
                 {error ? <p>invalid Email or Password</p>: null}
                 <h5>you dont have Account? register<Link to="/formular"> here</Link></h5>
-                </div><br/>
-                <h5>you dont have Account? <Link id="here" to="/formular"> Register Here </Link></h5>
+            <br/>
 
             </form>
         </div>
