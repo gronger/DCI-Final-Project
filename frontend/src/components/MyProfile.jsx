@@ -93,7 +93,7 @@ export default function MyProfile() {
     return (
         <div>
             <div>
-                <input type="file" name="selectedfile" onChange={changeFile} />
+                <input className="centered-button" type="file" name="selectedfile" onChange={changeFile} />
                 {/* <button onClick={saveFile}>saveFile</button> */}
 
                 {file && (
@@ -108,43 +108,43 @@ export default function MyProfile() {
                     </div>
                 )}
 
-                <h1><img className="profileimg" src={profilepic} />my profile</h1>
-                <button onClick={editProfile}>Edit my profile</button>
+                <h1><img className="profileimg white-text" src={profilepic} />My Profile</h1>
+                <button className="centered-button" onClick={editProfile}>Edit my profile</button>
             </div>
 
             <div className="user-data">
-                <div className="user-data-label">ID</div>
+                <div className="user-data-label white-text">ID</div>
                 <div disabled className="user-data-value">{localdata._id}</div>
             </div>
             <div className="user-data">
-                <div className="user-name">First name</div>
+                <div className="user-name white-text">First Name</div>
                 <div className="user-data-value">
                     <input disabled={isDisabled} type="text" onChange={handleChange} name="firstname" value={localdata.firstname} />
                 </div>
 
-                <div className="user-name">Last name</div>
+                <div className="user-name white-text">Last Name</div>
                 <div className="user-data-value">
-                    <input disabled={isDisabled} type="text" onChange={handleChange} name="lastname" value={localdata.lastname} />
+                <input disabled={isDisabled} type="text" onChange={handleChange} name="lastname" value={localdata.lastname} />
                 </div>
 
-                <div className="user-username">User name</div>
+                <div className="user-username white-text">Username</div>
                 <div className="user-data-value">
                     <input type="text" disabled={isDisabled} onChange={handleChange} name='username' value={localdata.username} />
                 </div>
 
-                <div className="user-age">Age</div>
+                <div className="user-age white-text">Age</div>
                 <div className="user-data-value">
                     <input disabled={isDisabled} type="text" onChange={handleChange} name="age" value={localdata.age} />
                 </div>
 
 
-                <div className="user-description">Description</div>
+                <div className="user-description white-text">Description</div>
                 <div className="user-data-description">
                     <input  type="text" disabled={isDisabled} onChange={handleChange} name='description' value={localdata.description ? localdata.description : ''} />
                 </div>
 
                 <br />
-                <button onClick={saveInfos}>save</button>
+                <button onClick={saveInfos}>Save</button>
             </div>
 
 
