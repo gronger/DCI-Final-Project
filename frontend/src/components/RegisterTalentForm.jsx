@@ -118,20 +118,21 @@ function TalentPro(props) {
             onChange={handleInputChange}
           ></input>
         </div> */}
-
+        
         <div className="col-md-3 " class="mt-2">
         <label for="activity">What do you do?:</label>
 
           <select required name="activity" id="activity" onChange={handleInputChange}>
+            
             <option value="model">Model</option>
             <option value="actor">Actor</option>
-            <option value="dancer">Dancer</option>
+            <option value="dancer">Dancer</option> 
             <option value="other">Other</option>
           </select>
         </div>
 
         <div className="col-md-3 " class="mt-2">
-          <label for="lookingFor">What are you looking for?:</label>
+          <label  className="option" for="lookingFor">What are you looking for?:</label>
 
           <select required name="lookingFor" id="lookingFor" onChange={handleInputChange}>
             <option value="photographer">Photographer</option>
@@ -154,6 +155,7 @@ function TalentPro(props) {
 
           <input
             className="btn btn-outline-secondary"
+            class= "mt-4"
             onChange={changeFile}
             type="file"
             id="myFile"

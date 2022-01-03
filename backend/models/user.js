@@ -70,8 +70,8 @@ UserSchema.statics.login = async (userData) => {
   if (!user) {
     return null;
   }
-  const sucsess = await compare(userData.password, user.password)
-  if (!sucsess) {
+  const success = await compare(userData.password, user.password)
+  if (!success) {
     return null
   }
   return user.toJSON();

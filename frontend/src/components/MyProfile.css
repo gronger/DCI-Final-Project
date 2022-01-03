@@ -1,6 +1,7 @@
 
 h1{
     text-align: center;
+    color: red;
 }
 .user-data{
     text-align: center;
@@ -18,7 +19,14 @@ h1{
 }
 
 .profileimg{
-    width: 20%;
+    width: 10%;
 }
 
+.centered-button {
+    text-align: center;
+    margin-left: 50%;
+}
 
+.white-text {
+    color: white;
+}
