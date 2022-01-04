@@ -11,13 +11,15 @@
     background-position:center;
     box-shadow: 5px 5px 10px #5f4343,
     -5px -5px 10px #715151;
+    
 }
 
 
 .talent{
     margin-top: 10px;
     text-align: center;
-    background-color: rgb(0, 68, 255);
+    background-color: rgb(8, 57, 131, 0.966);
+    
 }
 
 .pro{
@@ -31,7 +33,7 @@
 .tinderCards__cardContainer{
     display:flex;
     justify-content: center;
-    margin-top: 5vh;
+    margin-top: 7vh;
 }
 
 .swipe{
@@ -46,7 +48,9 @@
 .card-title{
     width: 100%;
     padding: 20px;
-    background-color: blue;
+    background-color: rgba(8, 57, 131, 0.966);
+    border-radius: 30px;
+    
 }
 
 .card-img{
@@ -57,7 +61,10 @@
     text-align: center;
 }
 .card-info>p{
-    color: rgb(225, 177, 57);
+    color: rgb(221, 221, 221);
+    font-family: 'Questrial', sans-serif;
+    font-size: xx-large;
+
 }
 
 /* .btnn button{
@@ -75,14 +82,17 @@
 } */
 
 .btn-profile {
-    text-decoration: none;
+    padding: 0;
+    border: none;
+    background: none;
     border: 1px solid rgb(146, 148, 248);
     position: relative;
     overflow: hidden;
+    margin-top: 9px;
 }
 
 .btn-profile:hover {
-    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+    box-shadow: 1px 1px 25px 10px rgba(110, 223, 76, 0.925);
 }
 
 .btn-profile:before {

@@ -155,7 +155,6 @@ function TalentPro(props) {
 
           <input
             className="btn btn-outline-secondary"
-            class= "mt-4"
             onChange={changeFile}
             type="file"
             id="myFile"

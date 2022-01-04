@@ -4,16 +4,10 @@ import './about.css';
 const About = () => {
   return (
     <div className="about">
-      <h1>About us</h1>
+      <h1 className="Evrima">EVRIMA</h1>
       <br />
-      <h2>My idea is that this website gives beginners/people without money or experience in film or fashion the opportunity to organise a project:on the "user" side, models with no agencies, actors with no training, for example, can look here for projects they want to take part in. Also film directors and fashion designers who dont have budget can look for models and actors on the "employer" side.My idea was to take away the agency and give both sides more independence. Models dont have to wait to be contacted and told what to do. They can actively search out projects they are interested in and message the production directly.
-10:23
-Basically these industries are hard to enter. This platform gives everyone the opportunity to get some small jobs and experience
-10:26
-Target audience / prospective users:
--actors with little / no experience
--models without agencies
--directors / fashion designers with small / no budget / not a lot of industry connectionsthe website makes it easier for non professionals to make projects and connect with other people to do the projects with.</h2>
+      <h2>Welcome to Evrima! The site that makes it easy to find like-minded creative people to connect with and start working on projects together.We came up with Evrima after noticing that many creative people struggle to start finding work. As many creative industries are infamously difficult to enter, we created Evrima so that our users can link up and start creating a portfolio.Our site is for anyone and everyone looking to work on collaborative creative projects. Maybe you just graduated university and are looking to find your first job, maybe you're looking to expand on your portfolio or gain more experience, or perhaps you are a hobby artist, just looking to practise your interests. Everyone is welcome!Our site provides a platform for both sides, Talent (actors, models) and Project Organizers (photographers, film directors, fashion brands) to collaborate.We encourage anyone interested in working in creative industries to join our site, and find out for themselves what they can unleash!
+</h2>
     </div>
   )
 }

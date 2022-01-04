@@ -51,6 +51,7 @@ export default function Login() {
                 <h5>you dont have Account? <Link id="here" to="/formular"> Register Here </Link></h5>
             </form>
         </div>
+        
     )
 
 }

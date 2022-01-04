@@ -42,7 +42,7 @@ console.log(props.people)
                             </button>
                             </Link>
                                 <p>{person.username}</p>
-                                <p>{person.age}</p>
+                                {/* <p>{person.age}</p> */}
                             </div>
 
                         </div>
