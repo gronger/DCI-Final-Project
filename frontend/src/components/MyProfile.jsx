@@ -103,9 +103,11 @@ export default function MyProfile() {
 
             <div className="editpr"  >
                 <h2>Edit Your Profile</h2>
-                <input className="editpr"  type="file" name="selectedfile" onChange={changeFile} />
+                <input className="editpr"  type="file" name="selectedfile" onChange={changeFile} />     
+                <button  onClick={editProfile}>Edit my profile</button>
+
             <div>
-                <input type="file" name="selectedfile" onChange={changeFile} />
+                {/* <input type="file" name="selectedfile" onChange={changeFile} /> */}
                 {/* <button onClick={saveFile}>saveFile</button> */}
 
                 {file && (
@@ -115,18 +117,17 @@ export default function MyProfile() {
                         {/* <div>File size:{(file.size / 1024).toFixed(1)kilobytes }</div> */}
                         <div>File modified date:{file.lastModifiedDate.toISOString()}</div>
 
-                        <img className="profileimg" src={URL.createObjectURL(file)} />
+                        {/* <img className="profileimg" src={URL.createObjectURL(file)} /> */}
 
                     </div>
                 )}
 
                 {/* <h1><img className="profileimg" src={profilepic} />my profile</h1> */}
-                <button  onClick={editProfile}>Edit my profile</button>
             </div>
 
             
-                <h1><img className="profileimg" src={profilepic} />My Profile</h1>
-                <button className="centered-button" onClick={editProfile}>Edit my profile</button>
+                {/* <h1><img className="profileimg" src={profilepic} />My Profile</h1> */}
+                {/* <button className="centered-button" onClick={editProfile}>Edit my profile</button> */}
             </div>
 
             <div className="user-data">
