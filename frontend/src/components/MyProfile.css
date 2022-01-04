@@ -1,7 +1,5 @@
-
 h1{
     text-align: center;
-    color: red;
 }
 .user-data{
     text-align: center;
@@ -9,43 +7,26 @@ h1{
     padding: 1em;
     border: 1px solid;
     background: rgba(126, 141, 126, 0.3);
-    
 }
-
 .user-data-value-id{
     font-size: 25px;
     }
-
 .user-data-label{
     margin-left: 750px;
     font-size: 20px;
-
     width: 300px;
 }
-
 .description{
     height: 100px;
 }
-
 .profileimg{
-    width: 10%;
+    width: 20%;
 }
- 
 .editpr{
     margin-top: 25px;
     margin-bottom: 25px;
     text-align: center;
 }
-
 .editpr,h1 {
     color: beige;
-
-
-.centered-button {
-    text-align: center;
-    margin-left: 50%;
-}
-
-.white-text {
- main
 }
