@@ -5,13 +5,13 @@
     padding-right: 40px;
     text-align: justify;
     font-family: Times, "Times New Roman", Georgia, serif;
-    background-color:#f2906dc9;
 }
 
 .about h2{
     line-height: 2em;
 }
 
-h1{
-    color: rgb(29, 29, 29);
+.Evrima{
+    color: rgb(202, 199, 199);
+    font-family: 'EB Garamond', serif;
 }

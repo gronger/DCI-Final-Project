@@ -24,7 +24,7 @@ export default function Main() {
         <div>
 
 
-            <h1>Welcome to NameOfApp</h1>
+            <h1 class="maintitle"style={{color: "white"}} >Welcome to Evrima</h1>
             <div className="main titere">
 
                 {dbData ? <TinderCards people={dbData} /> : null}

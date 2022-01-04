@@ -12,8 +12,12 @@ export default function Logout() {
     }
 
     return (
-        <button onClick={logout}>Logout</button>
-    )
+             <button style={{color: "red"}}
+             c
+              onClick={logout}
+              > Logout
+              </button>
+              )
 }
 
 //instead of reload can also useContext

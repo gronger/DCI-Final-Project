@@ -91,13 +91,25 @@ export default function MyProfile() {
     }
 
     return (
+
         <div>
+            <div className="user-data">
+                <div className="user-data-label">
+                <p>ID</p> 
+                </div>
+
+                <div disabled className="user-data-value-id">{localdata._id}</div>
+            </div>
+
+            <div className="editpr"  >
+                <h2>Edit Your Profile</h2>
+                <input className="editpr"  type="file" name="selectedfile" onChange={changeFile} />
             <div>
                 <input className="centered-button" type="file" name="selectedfile" onChange={changeFile} />
                 {/* <button onClick={saveFile}>saveFile</button> */}
 
                 {file && (
-                    <div>
+                    <div className="funciona">
                         <div>File name:{file.name}</div>
                         <div>File type:{file.type}</div>
                         {/* <div>File size:{(file.size / 1024).toFixed(1)kilobytes }</div> */}
@@ -108,6 +120,11 @@ export default function MyProfile() {
                     </div>
                 )}
 
+                {/* <h1><img className="profileimg" src={profilepic} />my profile</h1> */}
+                <button  onClick={editProfile}>Edit my profile</button>
+            </div>
+
+            
                 <h1><img className="profileimg white-text" src={profilepic} />My Profile</h1>
                 <button className="centered-button" onClick={editProfile}>Edit my profile</button>
             </div>
