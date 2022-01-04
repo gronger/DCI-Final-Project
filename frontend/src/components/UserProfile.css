@@ -8,5 +8,9 @@
     text-align: center;
     color: rgb(220, 230, 216);
     font-size: 22px;
-    border: 1px red solid;
+}
+
+h3{
+    text-align: center;
+    color: beige;
 }

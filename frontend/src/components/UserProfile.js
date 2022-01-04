@@ -66,16 +66,16 @@ function UserProfile() {
 
   return (
     <div>
-      <h3>ID: {id}</h3>
+      <h3 className="aidi">ID: {id}</h3>
 
       <ul className="userinfo">
         <li className="">
-          name: {user.firstname} {user.lastname}{" "}
+          Name: {user.firstname} {user.lastname}{" "}
         </li>
-        <li>{user.typeUser}</li>
-        <li>{user.activity}</li>
-        <li>{user.lookingFor}</li>
-        <li>{user.age} years old </li>
+        <li>Type of User: {user.typeUser}</li>
+        <li>Activity: {user.activity}</li>
+        <li>Locking For: {user.lookingFor}</li>
+        <li> Age: {user.age} years old </li>
         <li>{user.weight} Kg.</li>
         <li>{user.height} Cm.</li>
         <li>{user.description}</li>
