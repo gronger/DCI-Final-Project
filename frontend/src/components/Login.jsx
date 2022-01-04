@@ -14,6 +14,7 @@ export default function Login() {
         email: "",
         password: ""
     })
+    const [error, setError] = useState(null);
 
 
     function loginHandler(e) {
@@ -21,8 +22,9 @@ export default function Login() {
         e.preventDefault();
         axios.post('http://localhost:5000/login', login)
             .then(response => {
+                console.log(response.status);
                 if (response.status === 200) {
-            console.log(response.data);
+                    console.log(response.data);
                     //setIsLoggedin({ ...isLoggedin, isUser: true })
                     localStorage.setItem("user", JSON.stringify(response.data.user))
                     localStorage.setItem("jwt", (response.data.token))
@@ -32,7 +34,11 @@ export default function Login() {
                 }
 
             })
-            .catch(error => console.log(error));
+            .catch(error => {
+                console.log(123);
+                setError(true);
+            });
+        
     }
 
     return (
@@ -47,8 +53,11 @@ export default function Login() {
                 
                 <div class="container">
                     <button className="btn" type="submit">Submit</button>
-                </div><br/>
-                <h5>you dont have Account? <Link id="here" to="/formular"> Register Here </Link></h5>
+                </div><br />
+                {error ? <p>invalid Email or Password</p>: null}
+                <h5>you dont have Account? register<Link to="/formular"> here</Link></h5>
+            <br/>
+
             </form>
         </div>
         
